@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Mirrored from okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jun 2022 02:32:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<link rel="shortcut icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../assets/css/maina752.css?v=20220622104826">
+<link type="application/atom+xml" rel="alternate" href="../feed.xml" title="Okb Interactive Studio" />
+
+<title>¿Por qué es mejor el modelo HSL para trabajar con colores en la web? | Okb Interactive Studio</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+<meta name="author" content="Okb Interactive Studio" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Aunque la mayoría de las veces usamos valores hexadecimales, lo cierto es que el modelo HSL resulta más práctico y cómodo a la hora de trabajar con colores en una web. Te explicamos por qué…" />
+<meta property="og:description" content="Aunque la mayoría de las veces usamos valores hexadecimales, lo cierto es que el modelo HSL resulta más práctico y cómodo a la hora de trabajar con colores en una web. Te explicamos por qué…" />
+<link rel="canonical" href="por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html" />
+<meta property="og:url" content="por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html" />
+<meta property="og:site_name" content="Okb Interactive Studio" />
+<meta property="og:image" content="../assets/images/posts/social/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-12T10:12:12+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="../assets/images/posts/social/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.jpg" />
+<meta property="twitter:title" content="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Okb Interactive Studio"},"dateModified":"2021-12-12T10:12:12+00:00","datePublished":"2021-12-12T10:12:12+00:00","description":"Aunque la mayoría de las veces usamos valores hexadecimales, lo cierto es que el modelo HSL resulta más práctico y cómodo a la hora de trabajar con colores en una web. Te explicamos por qué…","headline":"¿Por qué es mejor el modelo HSL para trabajar con colores en la web?","image":"https://okbinteractive.studio/assets/images/posts/social/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html"},"url":"https://okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html"}</script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NB9698F');</script>
+
+<script async src='../cdn-cgi/challenge-platform/h/b/scripts/invisiblec16c.js?ts=1656028800'></script></head>
+<body data-barba="wrapper" class="lang-es page-post">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB9698F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header id="header" class="header">
+<a href="../index.html" class="c-brand ajax-link" data-menu="close" data-mouse="over">
+<i class="c-brand-lo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+<path class="svgBrandPath" d="M41.62,16.14a23.36,23.36,0,0,1-3.9-.57,4.81,4.81,0,0,0-2.15-.65c-1.93.14-2.25,1.37-4.62,2.28-.36.14-.74.29-1.14.43a6,6,0,0,0,.52,1.65,4.07,4.07,0,0,1-.86-1.53,17.71,17.71,0,0,1-5.13,1.07c-3.92.17-8,1.47-12.94,7.53A6.76,6.76,0,0,1,8.77,28.1c.76,1.53,4.27,3.61,11.05,1.15a7,7,0,0,1-1-4.33,8,8,0,0,0,1.54,4.13h0A12.83,12.83,0,0,0,30.76,34.4a6.2,6.2,0,0,1-2.14-2.32c1,1.05,2.82,2.48,4.52,2h0a7.54,7.54,0,0,1-2.19-2c.33.22,2.38,2.14,3.68,1.39l.06,0A4.87,4.87,0,0,1,32.92,32c1.44,1,2.2.91,2.7.7-8-5.6-7.44-7.7-7.54-8.55h0a8.07,8.07,0,0,1,.5-3.4,6.54,6.54,0,0,0,.08,2.75c1.3-1.64,1-2.67,3.07-4.13a16.74,16.74,0,0,1,3.76-1.3c1.8-.38,2.8-.58,3.3-.71.65-.16,2.17-.5,2.5-.61S42.31,16.13,41.62,16.14Z" />
+<circle class="svgBrandCir" cx="25" cy="25" r="23.5" />
+</svg>
+</i>
+<span class="c-brand-tx">
+<span>OKB</span>
+<span>INTERACTIVE</span>
+<span>STUDIO</span>
+</span>
+</a>
+<nav class="c-navbar">
+
+<div class="c-navbar-contact">
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../contacta-con-nosotros/index.html" class="o-link" data-menu="close" data-mouse="over">contacta con nosotros</a>
+</div>
+</div>
+<div class="d-flex align-items-center c-menu-lng" data-menu-animate="fadeInUp">
+<a class="active" id="lang-es" href="../index.html" data-menu="close">Es</a>
+<span class="text-black">/</span>
+<a class="" id="lang-en" href="../en/index.html" data-menu="close">En</a>
+</div>
+<button type="button" role="button" class="c-ham" data-mouse="over">
+<span class="c-ham-o">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span class="c-ham-c">
+<span></span>
+<span></span>
+</span>
+</button>
+</nav>
+</header>
+<main class="main" data-barba="container" data-barba-namespace="post">
+<div id="scrollMain">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="container">
+<header class="post-header mb-20 mb-md-40">
+
+<h3 class="h3" data-animate="splitTextUp">Insights</h3>
+<div class="post-meta" data-animate="fadeInUp" data-delay="300">
+<div class="d-flex py-15">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">Desarrollo</span>
+</div>
+</div>
+</div>
+<h1 class="post-title" data-animate="splitTextUp">¿Por qué es mejor el modelo HSL para trabajar con colores en la web?</h1>
+<div class="post-meta" data-animate="fadeInUp" data-delay="600">
+<p class="read-time">4 min</p>
+</div>
+
+</header>
+<div class="post-content wysiwyg" itemprop="articleBody">
+<h5 id="aunque-a-la-hora-de-diseñar-para-web-css-nos-permite-usar-múltiples-modelos-de-color-lo-cierto-es-que-la-mayoría-de-las-veces-los-colores-que-se-utilizan-se-expresan-con-valores-hexadecimales-sin-embargo-hay-modelos-de-colores-que-resultan-más-prácticos-y-cómodos-a-la-hora-de-trabajar-que-el-hexadecimal-como-es-el-caso-del-hsl-del-que-vamos-a-hablar-en-este-artículo">Aunque a la hora de diseñar para web CSS nos permite usar múltiples modelos de color, lo cierto es que la mayoría de las veces los colores que se utilizan se expresan con valores hexadecimales. Sin embargo, hay modelos de colores que resultan más prácticos y cómodos a la hora de trabajar que el hexadecimal, como es el caso del HSL, del que vamos a hablar en este artículo.</h5>
+<div class="section sec-inner post-cta my-50">
+<div class="section-bg bg-light" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="block-case position-relative d-block" data-animate="enterSection">
+
+<div class="embed-responsive embed-responsive-16by9" data-animate="fadeInUp">
+<img class="embed-responsive-item" src="../assets/images/posts/por-que-es-mejor-usar-hsl-para-trabajar-con-colores-00.jpg" />
+</div>
+<div class="post-content">
+<div class="block-text text-white" data-animate="fadeInUp" data-delay="300">
+<p class="subtitle text-capitalize c-line mb-10 mb-md-25" data-animate="enterSection"><span class="c-line-ln"></span>Okb Interactive Studio</p>
+<a href="../contacta-con-nosotros/index.html" class="h2 text-white" data-animate="enterSection">¿Necesitas un equipo de desarrollo sólido para tu proyecto web?</a>
+<div class="d-none d-md-block mt-20">
+<a class="btn btn-okb btn-okb-white" data-animate="fadeInUp" data-delay="300" href="../contacta-con-nosotros/index.html">Contacta con nosotros</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="qué-es-el-hsl">¿Qué es el HSL?</h2>
+<p>El HSL es un modelo de color. Al igual que los modelos de color CMYK (de <em>‘cyan’, ‘magenta’, ‘yellow’</em> y <em>‘key’</em>, es decir ‘cian’, ‘magenta’, ‘amarillo’ y ‘negro’) y RGB (de <em>‘red’, ‘green’</em> y <em>‘blue’</em>, o ‘rojo’, ‘verde’ y ‘azul’), el nombre del modelo HSL también proviene de una sigla, en este caso la que forman las palabras <em>‘hue’, ‘saturation’</em> y <em>‘lightness’</em> (‘tono’, ‘saturación’ y ‘luminosidad’), ya que en lugar de jugar con pigmentos —como el CMYK— o luces —como el RGB—, el HSL juega con los componentes constituyentes del color.</p>
+<p>Por lo tanto, un color en HSL se expresa con la sucesión de tres valores, por ejemplo:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">7</span><span class="p">,</span> <span class="m">80%</span><span class="p">,</span> <span class="m">64%</span><span class="p">)}</span>
+</code></pre></div></div>
+<p>Como se puede apreciar, el primer valor es un número entero (aunque en realidad hace referencia a un ángulo, como ahora veremos) y los dos restantes son porcentajes. Pero analicemos detenidamente cada uno de estos valores:</p>
+<p>El primer valor con el que nos encontramos es el matiz, que básicamente es lo que define el color. Como decíamos representa el ángulo de un círculo cromático que va progresivamente del rojo al naranja, al amarillo, al verde, al azul, al añil, al morado, al fucsia y finalmente de nuevo al rojo. Así, un valor de 0º se corresponde con un color rojo, el 60º es un amarillo, el 120º es un verde, el 180º es un color azul, el 240º es un color añil, el 300º es el fucsia y el 360º volvería a ser el rojo.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/por-que-es-mejor-usar-hsl-para-trabajar-con-colores-02.jpg" alt="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+</picture>
+</div>
+<p>La saturación se refiere a la pureza del color y se controla con el segundo valor. Al 0% de saturación un color no tiene ningún matiz (se ve gris), mientras que al 100% se muestra totalmente saturado, es decir, muy vívido.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/por-que-es-mejor-usar-hsl-para-trabajar-con-colores-03.jpg" alt="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+</picture>
+</div>
+<p>Finalmente, con el último valor (la luminosidad) controlamos lo claro u oscuro que será el color. Los porcentajes bajos dan lugar a colores más oscuros (sin ir más lejos al 0% todo color es negro puro), mientras que los altos dan lugar a colores claros.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/por-que-es-mejor-usar-hsl-para-trabajar-con-colores-04.jpg" alt="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+</picture>
+</div>
+<h2 id="qué-ventajas-tiene-el-hsl">¿Qué ventajas tiene el HSL?</h2>
+<p>Los códigos de color hexadecimales (por ejemplo #000000 o #FFFFFF para el negro y blanco puros, respectivamente) tienen un punto a favor, y es que son cortos y, por lo tanto, fáciles de recordar. Pero si trabajas con procesadores de CSS como SASS —algo que seguramente hagas— y almacenas los colores en variables, esta ventaja tampoco supone tanto.</p>
+<p>Por el contrario, el modelo de color hexadecimal presenta varios problemas. Si por ejemplo te preguntamos qué tipo de color es el #ED6A5A, ¿sabrías decirlo? Pues se trata de un color terracota, pero seguramente no lo habrás acertado. No pasa nada: no es nada fácil adivinar de qué color se trata tan solo leyendo seis caracteres. Tampoco es intuitivo generar una escala cromática a partir de un código hexadecimal, algo que sin duda necesitas para crear tu Design System. Por ejemplo un color terracota oscuro en hexadecimal es #CA2B16, así que la relación que guarda con #ED6A5A te parecerá un misterio… Finalmente, tampoco puedes añadir opacidad a tus colores si usas el modelo hexadecimal.</p>
+<p>Afortunadamente, los colores en formato HSL pueden ayudarnos a resolver todos estos problemas.</p>
+<h3 id="los-valores-hsl-son-más-intuitivos">Los valores HSL son más intuitivos</h3>
+<p>Como hemos visto, solo fijándote en el primer valor HSL (el del matiz) sabrás si el color ante el que te encuentras es un añil, un verde, un amarillo… Con el segundo intuirás si es un color saturado o poco saturado. Y con el último podrás deducir si es un color oscuro o claro. En definitiva, comprenderás mejor los colores y trabajarás mejor con ellos.</p>
+<h3 id="el-hsl-facilita-crear-paletas-coherentes">El HSL facilita crear paletas coherentes</h3>
+<p>A la hora de generar paletas cromáticas para una web es muy importante que todos los colores guarden cierta armonía entre ellos. Digamos que tienen que ser distintos, pero a la vez tienen que tener algo en común que los una, que les haga parecer una familia. Y esto lo conseguimos con la saturación y la luminosidad. Los colores similares en saturación y luminosidad casan bien unos con otros. Así que puedes crear un conjunto coherente de colores secundarios modificando solo el tono del color primario. En el ejemplo que encontrarás justo debajo hay armonía porque sus colores tienen la prácticamente la misma luminosidad y la saturación es muy similar:</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/por-que-es-mejor-usar-hsl-para-trabajar-con-colores-01.jpg" alt="¿Por qué es mejor el modelo HSL para trabajar con colores en la web?" />
+</picture>
+</div>
+<h3 id="el-hsl-facilita-la-creación-de-variantes-cromáticas">El HSL facilita la creación de variantes cromáticas</h3>
+<p>Todo Design System necesita variaciones de los colores de la paleta cromática. Estas variaciones de color se utilizan por ejemplo cuando colocamos el cursor del ratón sobre algún elemento de nuestra web —como un botón— o para indicar que un elemento está temporalmente deshabilitado. Generalmente el efecto que se suele aplicar en el primer caso es el de oscurecer ligeramente el color, mientras que en el segundo lo que se hace es aclararlo. Para esto solo hay que jugar con el último valor de cada color: la luminosidad. Estas variantes de color también son útiles para generar degradados de color.</p>
+<h3 id="el-hsl-puede-generar-transparencias">El HSL puede generar transparencias</h3>
+<p>En realidad el HSL como tal no, pero si a este modelo de color le añadimos un cuarto valor, entonces tendremos el HSLA, en el que ‘A’ hace referencia a la transparencia (o canal <em>alpha</em>). Se utiliza así:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">div</span> <span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="n">hsla</span><span class="p">(</span><span class="m">7</span><span class="p">,</span> <span class="m">80%</span><span class="p">,</span> <span class="m">64%</span><span class="p">,</span> <span class="m">0.5</span><span class="p">)}</span>
+</code></pre></div></div>
+<p>Este color es el mismo color terracota que veíamos anteriormente aunque con un 50% de opacidad.</p>
+<hr />
+<p>Como conclusión, podemos decir que los colores en modelo HSL pueden ahorrarnos mucho tiempo y esfuerzo a la hora de trabajar con Design Systems. Incluso pueden ayudarnos a comprender mejor el funcionamiento del color y explotar todas sus opciones. ¿Y tú? ¿Ya trabajas con HSL o prefieres el modelo hexadecimal?</p>
+<div class="post-share mt-50">
+<div>
+<p class="font-weight-bold">¿Te ha parecido interesante? ¡Compártelo!</p>
+<p>Seguro que a tus contactos le gusta leerlo.</p>
+</div>
+<ul>
+<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html"><img src="../assets/images/logos/icon-linkedin.svg" alt="Linkedin" /></a></li>
+<li><a href="https://twitter.com/intent/tweet?text=Por%20qu%c3%a9%20es%20mejor%20usar%20HSL%20para%20trabajar%20con%20colores%20en%20tu%20web&amp;url=https://okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html&amp;hashtags=okbinteractivestudio"><img src="../assets/images/logos/icon-twitter.svg" alt="Twitter" /></a></li>
+<li><a href="https://api.whatsapp.com/send?text=Por%20qu%c3%a9%20es%20mejor%20usar%20HSL%20para%20trabajar%20con%20colores%20en%20tu%20web%20https://okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores"><img src="../assets/images/logos/icon-whatsapp.svg" alt="Whatsapp" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+<section class="section sec-inner module-form module-form-1 overflow-hidden ">
+<div class="section-bg bg-light" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="row">
+<div class="col-12 col-lg-6 mb-50 mb-lg-0">
+<div class="c-line c-line__h4 mt-lg-40" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4 mb-30 mb-md-50 mb-sm-30 mr-xxl-60" data-animate="splitTextUp">Somos un estudio digital independiente</h3>
+<div class="mr-md-60" data-animate="fadeInUp" data-delay="100">Trabajamos con startups y empresas de todos los tamaños ayudándoles a diseñar, crear y comunicar su producto de forma óptima para sus clientes.</div>
+<ul class="list-unstyled mt-35" data-animate="fadeInUp" data-delay="300">
+<li class="d-flex align-items-center my-15">
+<div>
+<span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Trabajamos en proyectos en todas sus fases y estados.
+</li>
+<li class="d-flex align-items-center my-15">
+<div>
+ <span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Incorporamos las últimas tecnologías de desarrollo web.
+</li>
+<li class="d-flex align-items-center my-15">
+<div>
+<span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Diseñamos productos digitales para mejorar la conversión de las campañas de marketing.
+</li>
+</ul>
+</div>
+</div>
+<div class="col-12 col-lg-6" data-animate="enterSection">
+<form class="needs-validation" novalidate data-animate="fadeInUp"> <div class="form-row">
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<select class="form-control" id="formProduct" name="interest" required>
+<option value="">Selecciona una opción</option>
+<option value="Producto o Website">Producto o Website</option>
+<option value="UI/UX">UI/UX</option>
+<option value="Ecommerce">Ecommerce</option>
+<option value="Salesforce">Salesforce</option>
+<option value="Otro">Otro</option>
+</select>
+<label for="formProduct">¿En qué estás interesado? *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formName" name="name" placeholder="Nombre *" required>
+<label for="formName">Nombre *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formCompany" name="company" placeholder="Empresa ">
+<label for="formCompany">Empresa </label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="email" class="form-control" id="formEmail" name="email" placeholder="Email *" required>
+<label for="formEmail">Email *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="tel" class="form-control" id="formPhone" name="phone" placeholder="Teléfono ">
+<label for="formPhone">Teléfono </label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formBased" name="location" placeholder="Localización (País o ciudad) ">
+<label for="formBased">Localización (País o ciudad) </label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<textarea class="form-control" id="formProject" name="about" placeholder="¿En que podemos ayudarte? *" style="min-height: 140px;" required></textarea>
+<label for="formProject">¿En que podemos ayudarte? *</label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<select class="form-control" id="formProject" name="hear">
+<option value="">Selecciona una opción</option>
+<option value="Google">Google</option>
+<option value="LinkedIn">LinkedIn</option>
+<option value="Recomendación">Recomendación</option>
+<option value="Blog">Blog</option>
+<option value="Otro">Otro</option>
+</select>
+<label for="formProject">¿Cómo nos has conocido? </label>
+</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary btn-block btn-submit">
+<span class="submit-text">Enviar</span>
+<div class="spinner-border text-light" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</button>
+</div>
+<div class="col-12">
+<div class="form-check py-10">
+<input class="form-check-input" type="checkbox" value="" id="checkLegal" required>
+<label class="form-check-label" for="checkLegal">He leido y acepto la <a class="o-link text-blue" href="../politica-de-privacidad/index.html">política de privacidad</a></label>
+</div>
+</div>
+</div>
+<div class="alert alert-success d-none" role="alert">Hemos recibido correctamente tu mensaje, en breve nos pondremos en contacto contigo</div>
+<div class="alert alert-danger d-none" role="alert">Ha habido un error con el envío, por favor inténtalo de nuevo</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section id="secBlog" class="section sec-blog bg-white d-flex justify-content-center flex-column">
+<div class="container">
+<div class="c-line c-line__h4 mb-50" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4" data-animate="splitTextUp">Insights</h3>
+</div>
+<div class="c-blog-grid row" data-animate="enterSection">
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.mobile.jpg" alt="Claves para mejorar el posicionamiento de un site con SEO Técnico">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">Desarrollo</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="claves-para-mejorar-el-posicionamiento-de-un-site-con-se-tecnico.html">Claves para mejorar el posicionamiento de un site con SEO Técnico</a></h4>
+<div class="card-blog-time">
+<span>9 min</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="como-mejorar-el-tiempo-de-carga-de-tus-webs.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/como-mejorar-el-tiempo-de-carga-de-tus-webs.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/como-mejorar-el-tiempo-de-carga-de-tus-webs.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/como-mejorar-el-tiempo-de-carga-de-tus-webs.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/como-mejorar-el-tiempo-de-carga-de-tus-webs.mobile.jpg" alt="Cómo mejorar el tiempo de carga de tus webs">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">Desarrollo</span>
+<span class="c-list-tags__item c-badge ">SEO</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="como-mejorar-el-tiempo-de-carga-de-tus-webs.html">Cómo mejorar el tiempo de carga de tus webs</a></h4>
+<div class="card-blog-time">
+<span>5 min</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="beneficios-de-las-progressive-web-apps.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/beneficios-de-las-progressive-web-apps.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/beneficios-de-las-progressive-web-apps.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/beneficios-de-las-progressive-web-apps.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/beneficios-de-las-progressive-web-apps.mobile.jpg" alt="Beneficios de las Progressive Web Apps">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">Desarrollo</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="beneficios-de-las-progressive-web-apps.html">Beneficios de las Progressive Web Apps</a></h4>
+<div class="card-blog-time">
+<span>5 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-line d-flex align-items-center justify-content-center p-0 mt-50 pb-5 pb-md-0">
+<a class="btn btn-outline-primary flex-grow-1 flex-sm-grow-0" href="index.html" data-animate="fadeInUp" data-delay="600">Ver otros insights</a>
+</div>
+</div>
+</section>
+
+<section id="secCTA" class="section sec-cta position-relative">
+<div class="section-bg bg-yellow" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="c-line c-line__h4" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4 mb-20" data-animate="splitTextUp">Hagamos algo grande juntos</h3>
+<div class="col-sm-10 col-md-6 p-0">
+<p data-animate="fadeInUp">Estamos en Madrid, pero podemos trabajar contigo estés donde estés. Cuéntanos tu proyecto y estaremos encantados de agendar una llamada o videollamada para abordarlo más en detalle. Sin compromiso. </p>
+</div>
+<a class="btn btn-outline-primary mt-15" data-animate="fadeInUp" data-delay="300" href="../contacta-con-nosotros/index.html">Contacta con nosotros</a>
+</div>
+</div>
+</section><footer class="section footer position-relative min-vh-100 text-white">
+<div class="section-bg bg-black" data-animate="slideScaleInLeft"></div>
+<div class="container position-relative d-flex justify-content-center flex-column">
+<h3 class="h2 mb-40 mb-md-70" data-animate='splitTextUp'>diseñamos<br>creamos<br>comunicamos</h2>
+<div class="c-line c-line__h4" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h4 class="h4" data-animate="fadeInUp">Contacto</h4>
+<p class="mb-0" data-animate="fadeInUp" data-delay="100"><a href="../cdn-cgi/l/email-protection.html#d9b1bcb5b5b699b6b2bbb0b7adbcabb8baadb0afbcf7aaadacbdb0b6" class="text-blue o-link" data-mouse="over">hello@okbinteractive.studio</a></p>
+<p data-animate="fadeInUp" data-delay="150"><a href="tel:+34916573657" class="text-blue o-link" data-mouse="over">(0034) 916573657</a></p>
+<p class="footer-adress" data-animate="fadeInUp" data-delay="200">Calle Teide, 4 (oficina 0.3)<br> S.S. de los Reyes, Madrid (España)</p>
+</div>
+<div class="c-line c-line__h4 mt-35 mt-md-50 mb-50 mb-lg-0" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h4 class="h4" data-animate="fadeInUp" data-delay="250">Descubre</h4>
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../index.html" class=" o-link" data-mouse="over">Inicio</a>
+<a href="../idea-mejores-productos/index.html" class=" o-link" data-mouse="over">Diseña</a>
+<a href="../hazlo-real/index.html" class=" o-link" data-mouse="over">Hazlo real</a>
+<a href="../comunica/index.html" class=" o-link" data-mouse="over">Comunica</a>
+<a href="../startups/index.html" class=" o-link" data-mouse="over">Startups</a>
+<a href="../proyectos/index.html" class=" o-link" data-mouse="over">Casos de estudio</a>
+<a href="index.html" class=" o-link" data-mouse="over">Insights</a>
+<a href="../empleo/index.html" class=" o-link" data-mouse="over">Empleo</a>
+<a href="../contacta-con-nosotros/index.html" class=" o-link" data-mouse="over">Contacto</a>
+</div>
+</div>
+</div>
+<div class="container">
+<p class="footer-copyright mb-0"><span>© 2008-2022 Okb Estudio Interactivo</span> <span class="d-none d-sm-inline-block mx-5">-</span> <a href="../politica-de-privacidad/index.html" class=" o-link" data-mouse="over">Política de privacidad</a></p>
+</div>
+</footer>
+</div>
+</main><nav class="c-menu" id="menu">
+<div class="c-menu-overlay"></div>
+<div class="c-menu-bg">
+
+<div class="c-menu-bg__ux">
+<div class="c-text-mask c-text-mask-menu__ux">
+<div class="blend-video content-ux" data-src="/assets/media/disena_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(208, 197, 255) 100%)">
+</div>
+</div>
+</div>
+<div class="c-menu-bg__make">
+<div class="c-text-mask c-text-mask-menu__make">
+<div class="blend-video content-make" data-src="/assets/media/crea_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(138, 185, 216) 100%)">
+</div>
+</div>
+</div>
+<div class="c-menu-bg__comunicate">
+<div class="c-text-mask c-text-mask-menu__comunicate">
+<div class="blend-video content-comunicate" data-src="/assets/media/comunica_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(208, 197, 255) 100%)">
+</div>
+</div>
+</div>
+</div>
+<div class="container position-relative py-50 py-md-120">
+<div class="c-line c-line__h4 mt-30 text-white" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<p id="menuTitle01" class="h4 mb-0" data-animate="fadeInUp" data-delay="250">Hagamos algo grande juntos</p>
+</div>
+<div class="c-line c-menu-wrap my-35 my-xxl-50 my-xxxl-60">
+<div class="c-menu-list">
+
+<a class="c-menu-item c-menu-item-design" data-on-off-hover="video" data-menu="close" data-video-link=".content-ux" href="../idea-mejores-productos/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuDesign"> diseña</text>
+</svg>
+</a>
+<a class="c-menu-item c-menu-item-make" data-on-off-hover="video" data-menu="close" data-video-link=".content-make" href="../hazlo-real/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuMake">
+hazlo
+<tspan dy="10">&lt;</tspan>
+<tspan dx="-35" dy="-12">real</tspan>
+<tspan dx="-35" dy="12">&gt</tspan>
+</text>
+</svg>
+</a>
+<a class="c-menu-item c-menu-item-comunicate" data-on-off-hover="video" data-menu="close" data-video-link=".content-comunicate" href="../comunica/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuComunicate"> conecta</text>
+</svg>
+</a>
+</div>
+</div>
+<div class="c-menu-list mt-30 mt-sm-0" data-menu-animate="fadeInUp">
+<div class="c-line c-line__h4 text-white" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<p id="menuTitle02" class="h4 mb-20" data-animate="fadeInUp" data-delay="250">Más</p>
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../startups/index.html" class=" o-link" data-menu="close" data-mouse="over">startups</a>
+<a href="../proyectos/index.html" class=" o-link" data-menu="close" data-mouse="over">casos de estudio</a>
+<a href="index.html" class=" o-link" data-menu="close" data-mouse="over">insights</a>
+<a href="../empleo/index.html" class=" o-link" data-menu="close" data-mouse="over">empleo</a>
+<a href="../contacta-con-nosotros/index.html" class="o-link d-md-none" data-menu="close" data-mouse="over">contacta con nosotros</a>
+</div>
+</div>
+</div>
+</div>
+</nav><div class="c-scrolldown">
+<div class="c-scrolldown-text">scroll</div>
+<div class="c-scrolldown-line">
+<span class="c-scrolldown-line-in"></span>
+</div>
+</div><div class="c-fixed-comment">
+<div class="c-fixed-comment-text">Somos <span class="font-weight-bold">okb</span>, un estudio digital &lt;multi__disciplinar&gt; independiente</div>
+<div class="c-fixed-comment-crcl"></div>
+</div><div class="loadingContainer">
+<div id="progress_bar">
+<div id="bar_percentage"></div>
+</div>
+<i class="c-brand-lo c-brand-loading">
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 50 50">
+<path class="svgBrandPath svgBrandPathLoading" d="M41.62,16.14a23.36,23.36,0,0,1-3.9-.57,4.81,4.81,0,0,0-2.15-.65c-1.93.14-2.25,1.37-4.62,2.28-.36.14-.74.29-1.14.43a6,6,0,0,0,.52,1.65,4.07,4.07,0,0,1-.86-1.53,17.71,17.71,0,0,1-5.13,1.07c-3.92.17-8,1.47-12.94,7.53A6.76,6.76,0,0,1,8.77,28.1c.76,1.53,4.27,3.61,11.05,1.15a7,7,0,0,1-1-4.33,8,8,0,0,0,1.54,4.13h0A12.83,12.83,0,0,0,30.76,34.4a6.2,6.2,0,0,1-2.14-2.32c1,1.05,2.82,2.48,4.52,2h0a7.54,7.54,0,0,1-2.19-2c.33.22,2.38,2.14,3.68,1.39l.06,0A4.87,4.87,0,0,1,32.92,32c1.44,1,2.2.91,2.7.7-8-5.6-7.44-7.7-7.54-8.55h0a8.07,8.07,0,0,1,.5-3.4,6.54,6.54,0,0,0,.08,2.75c1.3-1.64,1-2.67,3.07-4.13a16.74,16.74,0,0,1,3.76-1.3c1.8-.38,2.8-.58,3.3-.71.65-.16,2.17-.5,2.5-.61S42.31,16.13,41.62,16.14Z" />
+<circle class="svgBrandCir svgBrandCirLoading" r="23" fill="none" cx="25" cy="25" stroke="black" stroke-width="8" />
+<circle class="svgBrandCir svgBrandCirLoadingBack" r="23" fill="none" cx="25" cy="25" stroke="black" stroke-width="7" />
+</svg>
+</i>
+</div><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/vendors-dista752.js?v=20220622104826"></script>
+<script src="../assets/js/scripts-dista752.js?v=20220622104826"></script>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'72020d01eca96f23',m:'QLS63JIGS9GldPDhEOYJWjGr.HFs7aNeyNI5B4j8pUQ-1656037924-0-Ac+wiLx92OtewdvbtFCGiE3chPwCjVtR0O9LyNPM7qpnWoQAtKd/Cx7HYBKzsTwKJKeIcC0Zxg2S+wb6cqzOrXOJ8bbRgxaCtZkUL3B8rUwx9tuUy5amRc04Sv0bFCSY6HHyrP42ASzf0+2JVsmnyXLt1t8mvjbKO499MHUvlj+JYn0P0+rHkjWxsC1nLRc7ww==',s:[0x8bcf53ee7b,0xe6752588a8],u:'/cdn-cgi/challenge-platform/h/b'}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"72020d01eca96f23","version":"2022.6.0","r":1,"token":"694e680bfb354dc181b243c5069491b5","si":100}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from okbinteractive.studio/insights/por-que-es-mejor-usar-hsl-para-trabajar-con-colores by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jun 2022 02:32:56 GMT -->
+</html>

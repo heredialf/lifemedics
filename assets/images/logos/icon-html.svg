@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-icon-html">
+      <rect width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="icon-html" clip-path="url(#clip-icon-html)">
+    <g id="html" transform="translate(-5.445 -5.999)">
+      <path id="Trazado_142" data-name="Trazado 142" d="M125.836,135l18.064-5.062L147.9,85h-44l4,44.938Zm13.876-40.812-.5,5.469H118.15l.468,5.655h20.126l-1.564,17-11.218,3.092v.032h-.125l-11.313-3.124-.687-8.689h5.469l.406,4.375,6.125,1.656L131.992,118l.69-7.124H113.556l-1.468-16.687Zm0,0" transform="translate(-90.455 -74.002)" fill="#111"/>
+    </g>
+  </g>
+</svg>

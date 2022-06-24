@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-icon-twitch">
+      <rect width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="icon-twitch" clip-path="url(#clip-icon-twitch)">
+    <path id="Icon_awesome-twitch" data-name="Icon awesome-twitch" d="M4.063,2.25.7,10.833V45.911H12.645V52.25h6.719L25.7,45.911h9.71L48.471,32.853V2.25ZM44,30.609l-7.467,7.467H24.587l-6.339,6.339V38.076H8.17V6.725H44V30.609Zm-7.467-15.3V28.355H32.054V15.308Zm-11.942,0V28.355H20.112V15.308Z" transform="translate(5.19 3.75)" fill="#111"/>
+  </g>
+</svg>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Mirrored from okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jun 2022 02:32:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<link rel="shortcut icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../assets/css/maina752.css?v=20220622104826">
+<link type="application/atom+xml" rel="alternate" href="../feed.xml" title="Okb Interactive Studio" />
+
+<title>Cómo crear un Design System paso a paso | Okb Interactive Studio</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Cómo crear un Design System paso a paso" />
+<meta name="author" content="Okb Interactive Studio" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Los productos web necesitan añadir rápidamente nuevas funcionalidades para no quedar fuera del mercado. Así que es fundamental que tengan un diseños que les permita crecer de forma ágil pero sin perder la consistencia." />
+<meta property="og:description" content="Los productos web necesitan añadir rápidamente nuevas funcionalidades para no quedar fuera del mercado. Así que es fundamental que tengan un diseños que les permita crecer de forma ágil pero sin perder la consistencia." />
+<link rel="canonical" href="como-crear-un-design-system-paso-a-paso.html" />
+<meta property="og:url" content="como-crear-un-design-system-paso-a-paso.html" />
+<meta property="og:site_name" content="Okb Interactive Studio" />
+<meta property="og:image" content="../assets/images/posts/social/como-crear-un-design-system-paso-a-paso.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-07T05:15:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="../assets/images/posts/social/como-crear-un-design-system-paso-a-paso.jpg" />
+<meta property="twitter:title" content="Cómo crear un Design System paso a paso" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Okb Interactive Studio"},"dateModified":"2022-01-07T05:15:00+00:00","datePublished":"2022-01-07T05:15:00+00:00","description":"Los productos web necesitan añadir rápidamente nuevas funcionalidades para no quedar fuera del mercado. Así que es fundamental que tengan un diseños que les permita crecer de forma ágil pero sin perder la consistencia.","headline":"Cómo crear un Design System paso a paso","image":"https://okbinteractive.studio/assets/images/posts/social/como-crear-un-design-system-paso-a-paso.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso.html"},"url":"https://okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso.html"}</script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NB9698F');</script>
+
+<script async src='../cdn-cgi/challenge-platform/h/b/scripts/invisiblec16c.js?ts=1656028800'></script></head>
+<body data-barba="wrapper" class="lang-es page-post">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB9698F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header id="header" class="header">
+<a href="../index.html" class="c-brand ajax-link" data-menu="close" data-mouse="over">
+ <i class="c-brand-lo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+<path class="svgBrandPath" d="M41.62,16.14a23.36,23.36,0,0,1-3.9-.57,4.81,4.81,0,0,0-2.15-.65c-1.93.14-2.25,1.37-4.62,2.28-.36.14-.74.29-1.14.43a6,6,0,0,0,.52,1.65,4.07,4.07,0,0,1-.86-1.53,17.71,17.71,0,0,1-5.13,1.07c-3.92.17-8,1.47-12.94,7.53A6.76,6.76,0,0,1,8.77,28.1c.76,1.53,4.27,3.61,11.05,1.15a7,7,0,0,1-1-4.33,8,8,0,0,0,1.54,4.13h0A12.83,12.83,0,0,0,30.76,34.4a6.2,6.2,0,0,1-2.14-2.32c1,1.05,2.82,2.48,4.52,2h0a7.54,7.54,0,0,1-2.19-2c.33.22,2.38,2.14,3.68,1.39l.06,0A4.87,4.87,0,0,1,32.92,32c1.44,1,2.2.91,2.7.7-8-5.6-7.44-7.7-7.54-8.55h0a8.07,8.07,0,0,1,.5-3.4,6.54,6.54,0,0,0,.08,2.75c1.3-1.64,1-2.67,3.07-4.13a16.74,16.74,0,0,1,3.76-1.3c1.8-.38,2.8-.58,3.3-.71.65-.16,2.17-.5,2.5-.61S42.31,16.13,41.62,16.14Z" />
+<circle class="svgBrandCir" cx="25" cy="25" r="23.5" />
+</svg>
+</i>
+<span class="c-brand-tx">
+<span>OKB</span>
+<span>INTERACTIVE</span>
+<span>STUDIO</span>
+</span>
+</a>
+<nav class="c-navbar">
+
+<div class="c-navbar-contact">
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../contacta-con-nosotros/index.html" class="o-link" data-menu="close" data-mouse="over">contacta con nosotros</a>
+</div>
+</div>
+<div class="d-flex align-items-center c-menu-lng" data-menu-animate="fadeInUp">
+<a class="active" id="lang-es" href="../index.html" data-menu="close">Es</a>
+<span class="text-black">/</span>
+<a class="" id="lang-en" href="../en/index.html" data-menu="close">En</a>
+</div>
+<button type="button" role="button" class="c-ham" data-mouse="over">
+<span class="c-ham-o">
+<span></span>
+<span></span>
+<span></span>
+</span>
+<span class="c-ham-c">
+<span></span>
+<span></span>
+</span>
+</button>
+</nav>
+</header>
+<main class="main" data-barba="container" data-barba-namespace="post">
+<div id="scrollMain">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="container">
+<header class="post-header mb-20 mb-md-40">
+
+<h3 class="h3" data-animate="splitTextUp">Insights</h3>
+<div class="post-meta" data-animate="fadeInUp" data-delay="300">
+<div class="d-flex py-15">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">UX/UI</span>
+</div>
+</div>
+</div>
+<h1 class="post-title" data-animate="splitTextUp">Cómo crear un Design System paso a paso</h1>
+<div class="post-meta" data-animate="fadeInUp" data-delay="600">
+<p class="read-time">14 min</p>
+</div>
+
+</header>
+<div class="post-content wysiwyg" itemprop="articleBody">
+<h5 id="el-diseño-determina-en-buena-parte-el-éxito-de-un-site-pero-en-los-últimos-años-el-significado-del-término-diseño-ha-cambiado-radicalmente-sobre-todo-en-lo-que-se-refiere-al-sector-digital-hoy-en-día-los-productos-necesitan-añadir-nuevas-funcionalidades-crecer-a-veces-reorientarse-o-incluso-convertirse-en-otra-cosa-en-definitiva-necesitan-cambiar-para-sobrevivir-y-lo-más-importante-necesitan-hacerlo-muy-rápido-los-plazos-se-han-acortado-hasta-límites-inimaginables-lo-que-antes-podía-realizarse-en-meses-ahora-es-vital-poder-hacerlo-en-semanas-así-que-el-problema-no-es-ya-conseguir-un-diseño-bonito-y-con-personalidad-que-también-es-crucial-sino-que-ese-diseño-sirva-como-base-sólida-para-un-crecimiento-ágil-pero-sin-perder-la-consistencia-del-producto-y-aquí-es-donde-entra-en-juego-el-design-system">El diseño determina en buena parte el éxito de un <em>site</em>. Pero en los últimos años el significado del término ‘diseño’ ha cambiado radicalmente, sobre todo en lo que se refiere al sector digital. Hoy en día los productos necesitan añadir nuevas funcionalidades, crecer, a veces reorientarse o incluso convertirse en otra cosa… En definitiva, necesitan cambiar para sobrevivir y —lo más importante— necesitan hacerlo muy rápido. Los plazos se han acortado hasta límites inimaginables: lo que antes podía realizarse en meses ahora es vital poder hacerlo en semanas. Así que el problema no es ya conseguir un diseño bonito y con personalidad (que también es crucial), sino que ese diseño sirva como base sólida para un crecimiento ágil pero sin perder la consistencia del producto. Y aquí es donde entra en juego el Design System.</h5>
+<div class="section sec-inner post-cta my-50">
+<div class="section-bg bg-light" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="block-case position-relative d-block" data-animate="enterSection">
+
+<div class="embed-responsive embed-responsive-16by9" data-animate="fadeInUp">
+<img class="embed-responsive-item" src="../assets/images/posts/como-crear-un-design-system-paso-a-paso-00.jpg" />
+</div>
+<div class="post-content">
+<div class="block-text text-white" data-animate="fadeInUp" data-delay="300">
+<p class="subtitle text-capitalize c-line mb-10 mb-md-25" data-animate="enterSection"><span class="c-line-ln"></span>Okb Interactive Studio</p>
+<a href="../contacta-con-nosotros/index.html" class="h2 text-white" data-animate="enterSection">¿Necesitas un Design System para tu producto digital?</a>
+<div class="d-none d-md-block mt-20">
+<a class="btn btn-okb btn-okb-white" data-animate="fadeInUp" data-delay="300" href="../contacta-con-nosotros/index.html">Te ayudamos a crearlo de cero</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="pero-qué-es-un-design-system-exactamente">¿Pero qué es un Design System exactamente?</h2>
+<p>El Design System (o sistema de diseño) es básicamente un conjunto de elementos —botones, títulos, formularios, pestañas, carruseles, <em>tooltips</em>…— que sirven para construir un <em>site</em> como si de unas piezas de Lego se tratase. Este Design System reúne además todas las normas de diseño que deben seguirse para utilizar esas ‘piezas’.</p>
+<p>Pero no hay que confundir un Design System con una guía de estilo: lo que realmente caracteriza a un Design System es que es más que una herramienta de consulta, sino que sirve como herramienta de trabajo. Algunos ejemplos de Design System son <a href="https://material.io/" target="_blank" rel="noopener noreferrer nofollow">Material Design</a> de Google o <a href="https://www.carbondesignsystem.com/" target="_blank" rel="noopener noreferrer nofollow">Carbon Design</a> de IBM.</p>
+<h2 id="qué-beneficios-aporta-un-design-system">¿Qué beneficios aporta un Design System?</h2>
+<p>Lo que se pretende conseguir con un Design System es básicamente que un <em>site</em> crezca de manera rápida sin perder la consistencia que necesita. Pero además los beneficios del Design System son más:</p>
+<ul>
+<li>
+<p>El equipo de diseño trabaja mejor porque la toma de decisiones se reduce al estar todos los elementos prefijados en el Design System. No hay debates y se reducen las interpretaciones personales que puede hacer cada diseñador.</p>
+</li>
+<li>
+<p>El equipo de desarrollo trabaja mejor porque puede reutilizar código fácilmente.</p>
+</li>
+<li>
+<p>La colaboración entre diseñadores, desarrolladores y responsables de contenidos es más efectiva porque todos ellos conocen mejor el producto, utilizar los mismos términos para referirse a cada elemento y entienden bien su finalidad.</p>
+</li>
+<li>
+<p>Se consigue mayor flexibilidad en la empresa porque si los equipos crecen o cambian, el proceso de aprendizaje de las nuevas incorporaciones es más rápido al estar todo más estandarizado.</p>
+</li>
+<li>
+<p>Aunque un <em>site</em> tenga cientos de páginas, el producto es más consistente y sobre todo es más fácil de emplear, porque se crean patrones claros y reconocibles por quienes lo usan.</p>
+</li>
+<li>
+<p>El <em>site</em> es más fácil de mantener, el código está optimizado y se mejora el rendimiento.</p>
+</li>
+<li>
+<p>Todo lo necesario para el trabajo (plantillas de diseño, documentación, repositorios de código, recursos…) está en un mismo lugar.</p>
+</li>
+<li>
+<p>Los costes se abaratan.</p>
+</li>
+</ul>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-01.jpg" alt="¿Qué beneficios aporta un Design System?" />
+</picture>
+</div>
+<p>¿Así que todas las empresas deben tener implementado un Design System? Es el tamaño de la empresa el que suele dar respuesta a esta pregunta. Evidentemente, los Design System son algo obligatorio para las empresas en las que muchas personas trabajan en un mismo producto a la vez, a veces de departamentos distintos que incluso pueden estar ubicados en diferentes partes de un país o hasta del planeta. Pero también resulta interesante para <em>startups</em> o empresas más pequeñas con un equipo más reducido y localizado donde, aunque <em>a priori</em> un Design System puede parecer menos necesario, la agilidad de desarrollo que ofrece resultará beneficiosa en cuando el producto y los equipos crezcan o cambien.</p>
+<h2 id="cómo-diseñar-un-design-system">¿Cómo diseñar un Design System?</h2>
+<p>En este artículo vamos a ver cómo crear un Design System paso a paso. Para ello en primer lugar vamos a necesitar una herramienta de diseño de interfaces de usuario con la que ir dando forma a los distintos elementos. En nuestro caso solemos usar <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer nofollow">Figma</a>, aunque evidentemente también se pueden usar otras como <a href="https://www.adobe.com/es/products/xd.html" target="_blank" rel="noopener noreferrer nofollow">Adobe XD</a> o <a href="https://www.sketch.com/" target="_blank" rel="noopener noreferrer nofollow">Sketch</a>.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-02.jpg" alt="¿Cómo diseñar un Design System?" />
+</picture>
+</div>
+<p>Para el proceso de creación generalmente se suele emplear la metodología <em>Atomic Design</em>, enunciada por el diseñador web estadounidense Brad Frost y que se ha convertido en una de las grandes referencias en este campo. Puedes encontrar más información en <a href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener noreferrer nofollow">su blog</a>, aunque básicamente lo que viene a decir es que todos los elementos de una web se estructuran en tres niveles, a los que él llama <em>atoms</em> (átomos), <em>molecules</em> (moléculas) y <em>organisms</em> (organismos): los átomos son las piezas más sencillas, sin valor por sí solos, pero que si se juntan forman moléculas más complejas, que a su vez se combinan para construir organismos. La mayoría de Design Systems sigue este concepto a la hora de diseñar sus elementos, aunque lo habitual es llamarlos <em>foundations,</em> <em>components</em> y <em>patterns.</em></p>
+<h3 id="1-foundations">1. Foundations</h3>
+<p>También llamados <em>tokens</em> por algunos diseñadores, los <em>foundations</em> (cimientos) son la unidad más pequeña del Design System (siguiendo la metodología Atomic Design de Brad Frost serían lo que él llama ‘atomos’). En nuestro documento en Figma —o en Sketch o en Adobe XD— los <em>foundations</em> toman la forma de estilos que posteriormente se utilizarán en la elaboración de los componentes del Design System. Los <em>foundations</em> más comunes son el patrón, la paleta cromática, la tipografía, la iconografía y las animaciones, aunque también se pueden incluir otros según la naturaleza del <em>site</em>.</p>
+<h4 id="el-patrón">El patrón</h4>
+<p>‘Patrón’, <em>‘layout’,</em> <em>‘grid’,</em> ‘retícula’… Todos ellos son diferentes términos para referirse a un mismo concepto: el espacio que ocupa el <em>site</em> y la forma en la que se distribuyen en él los distintos elementos para que los usuarios localicen y comprendan mejor el contenido. El <em>grid</em> debe repetirse en todas y cada una de las páginas del <em>site,</em> ya que esto ayudará a darle una fuerte consistencia. Para generar un <em>grid</em> debemos especificar los siguientes aspectos:</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-03.jpg" alt="Cómo diseñar el grid de un site en un Design System" />
+</picture>
+</div>
+<ul>
+<li>
+<p><strong>Puntos de ruptura:</strong> El espacio no es lo mismo en un móvil de 360px de ancho que en un monitor de un Mac de 2500 y, por lo tanto, el patrón cambiará de uno a otro. Así que lo primero que debemos fijar en un Design System son los puntos de ruptura que servirán para fijar las distintas resoluciones con las que tendrán que trabajar diseñadores y desarrolladores. Tendremos así tantos <em>grids</em> como puntos de ruptura establezcamos, generalmente cuatro: uno para dispositivos móviles, otro para tabletas, otro para portátiles y otro para monitores.</p>
+</li>
+<li>
+<p><strong>Unidad de referencia:</strong> Es el número que servirá como base para generar todos los tamaños que se apliquen en el <em>site.</em> Habitualmente se usa un sistema basado en el 8, aunque hay Design Systems que usan sistemas basados en otros números. Dependiendo del que escojamos, todos los elementos del <em>site</em> tendrán unas dimensiones que sean múltiplo de dicho número. Así, si nos decantamos finalmente por el 8, las medidas disponibles serán 8px, 16px, 24px, 32px, 40px, 48px, 56px, 64px, 72px, 80px, 88px, 96px… Explicaremos esto mejor un poco más adelante, pero —como ejemplo inicial— un botón podrá medir 32px de alto o 40px, pero nunca 36px. Trabajar con el 8 sirve para crear diseños más armónicos, ya que las medidas de referencia son menores. Sin embargo, para algunos diseñadores esto supone un problema porque a partir de determinado momento los saltos son demasiado grandes. Por eso prefieren otras unidades de referencia como el 6 (6px, 12px, 18px, 24px, 30px, 36px, 42px, 48px, 54px, 60px, 66px, 72px, 78px…) o el 5 (5px, 10px, 15px, 20px, 25px, 30px, 35px, 40px, 45px, 50px, 55px…)</p>
+</li>
+<li>
+<p><strong>Contenedor y columnas:</strong> El <em>grid</em> de tu <em>site</em> se divide en columnas. Para las resoluciones grandes siempre se suelen emplear doce columnas. El 12 es un número muy versátil porque es divisible entre 2, 3, 4, 6, lo que permite múltiples combinaciones de columnas (12, 6+6, 4+4+4, 3+3+3+3, 8+4, 6+3+3…). Sin embargo, para resoluciones más pequeñas no se suelen usar tantas columnas, ya que estas quedan demasiado estrechas y rara vez se usan individualmente. Lo habitual es hacer una división de ocho columnas para las tabletas y de cuatro para los teléfonos móviles, pero en cada Design System podemos usar las que estimemos apropiado en función del contenido que vayamos a publicar. A la suma de todas las columnas del <em>grid</em> se le suele llamar ‘contenedor’ (o <em>‘container’</em>).</p>
+</li>
+<li>
+<p><strong>Márgenes:</strong> El contenedor del <em>site</em> (es decir, todas sus columnas juntas) nunca se ajusta a los límites de la pantalla, sino que deja siempre un espacio a ambos lados. Es lo que llamamos ‘márgenes’. En resoluciones pequeñas (como por ejemplo la de un teléfono móvil), los contenedores suelen ser flexibles (se ensanchan según se ensancha la pantalla) y tienen márgenes fijos a cada lado, que suelen ser estrechos para aprovechar mejor el espacio. Mientras, en resoluciones grandes, lo habitual es que estos márgenes se generen a partir del espacio sobrante que deje el contenedor, al que se le suele asignar un ancho máximo, que puede ser de 980, 1080, 1140, 1200 píxeles… El tamaño final depende de la unidad de referencia que se haya escogido, ya que las columnas y las separaciones entre ellas deben tener un ancho que sea múltiplo de este número.</p>
+</li>
+<li>
+<p><strong>Medianiles:</strong> Las columnas están separadas por espacios que se denominan ‘medianiles’, aunque es más habitual referirse a ellos por su nombre en inglés: <em>gutters</em>. El <em>grid</em> puede usar cualquier separación entre columnas, aunque como hemos visto siempre tiene que ser un múltiplo de la unidad de referencia que hayamos fijado previamente. De hecho lo habitual es que el ancho del medianil cambie en función de la resolución: en composiciones grandes se suele usar medianiles anchos para dar más separación entre elementos (por ejemplo de 24px si trabajamos con el 8 como unidad de referencia), pero en composiciones estrechas los medianiles más finos ayudan a aprovechar mejor el espacio (por ejemplo bajándolos a 16px).</p>
+</li>
+<li>
+<p><strong>Filas:</strong> Si las columnas ordenan el contenido horizontalmente, las filas lo hacen verticalmente. Para esto se crean líneas paralelas que deben distar entre sí exactamente el espacio en píxeles de nuestra unidad de referencia, lo que sirve para crear una rejilla en la que deben encajar todos y cada uno de los elementos que se generen en el Design System.</p>
+</li>
+<li>
+<p><strong>Separaciones:</strong> En algunos Design System las separaciones se incluyen como un elemento externo al <em>grid</em>, aunque en nuestra opinión están muy relacionadas con él. Las separaciones es el conjunto de valores que se puede asignar al espacio que se aplique entre los distintos elementos de la interfaz. Una vez más, la unidad de referencia vuelve a ser protagonista, ya que es la que sirve para generar todos estos valores. Normalmente suelen usarse unos 13 valores, resultantes de multiplicar la unidad de referencia por 0.25, 0.5, 1, 1.5, 2, 3, 4, 5, 6, 8, 10, 12 y 20.</p>
+</li>
+</ul>
+<h4 id="la-paleta-cromática">La paleta cromática</h4>
+<p>Todo Design System debe incluir un listado con los colores que se pueden usar a lo largo del <em>site,</em> así como la función que tiene cada uno de ellos. Este apartado es muy importante, porque sin duda el color es uno de los elementos más representativos de un <em>site</em> y, por tanto, uno de los que más contribuye a la hora de conseguir un aspecto consistente. Además, el color es un lenguaje por sí solo, así que lejos de ser un elemento meramente decorativo hay que considerarlo como una forma más de comunicarse con eficacia con los usuarios.</p>
+<p>Todos los colores deben funcionar bien entre ellos, pero sobre todo deben ofrecer un correcto contraste cuando se muestren los unos junto a los otros, especialmente en el caso del color que se vaya a aplicar a los textos y a los fondos sobre los que estos se representan. Lo recomendable es que este contraste sea de tipo AA según las directrices WCAG (<em>Web Content Accessibility Guidelines</em> o ‘Directrices de accesibilidad de los contenidos web’): para comprobarlo existen herramientas <em>online</em> muy útiles como por ejemplo <a href="https://colourcontrast.cc/" target="_blank" rel="noopener noreferrer nofollow">Color Contrast</a> o <a href="https://colorable.jxnblk.com/" target="_blank" rel="noopener noreferrer nofollow">Colorable</a>.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-04.jpg" alt="Cómo hacer la paleta cromática de un Design System" />
+</picture>
+</div>
+<p>Para mejorar la consistencia en tu <em>site</em> lo recomendable es utilizar la menor cantidad de colores posibles. En nuestro blog ya hemos hablado en alguna ocasión de <a href="como-escoger-la-paleta-cromatica-de-una-web.html">cómo elegir la paleta cromática para una web</a>, así que aquí vamos a incluir un pequeño resumen:</p>
+<ul>
+<li>
+<p>El <strong>color de marca</strong> es el color que representa a la empresa y por tanto el dominante dentro del <em>site,</em> es decir, el que más espacio ocupa. También lo podemos llamar color primario, ya que como vamos a ver es el que se toma como referencia para generar el resto de colores de la paleta.</p>
+</li>
+<li>
+<p>El <strong>color de énfasis</strong> suele ser un color muy llamativo que ofrece un buen contraste con el color de marca dominante en el <em>site.</em> Su función es la de llamar la atención de los usuarios sobre algunos elementos estratégicos, como botones, enlaces o algunos textos.</p>
+</li>
+<li>
+<p>Mantener un sitio web solo con colores de marca no es nada fácil. Por eso lo habitual es que el papel del color de marca se reparta entre dos o incluso tres colores más, aunque siempre jerarquizando su uso. A estos los solemos llamar <strong>colores secundarios.</strong></p>
+</li>
+<li>
+<p>A la paleta se deben añadir unos <strong>colores adicionales neutros</strong> que se emplearán en la arquitectura del <em>site</em>, como fondos, filetes y textos. Estos colores suelen ser el blanco, el negro y algún gris intermedio. Recuerda que en combinación, el negro y el blanco puros (#000000 y #FFFFFF) ofrecen un alto contraste que puede resultar demasiado deslumbrante y causar fatiga visual, así que nuestra recomendación es no recurrir a ellos, sino a versiones más ‘rebajadas’ (#FFFEFC y #212121, por ejemplo). Para generar estos colores neutros acorde con el resto, recomendamos usar herramientas muy útiles como <a href="https://palx.jxnblk.com/" target="_blank" rel="noopener noreferrer nofollow">PALX</a>.</p>
+</li>
+<li>
+<p>Finalmente, un Design System debe incluir <strong>colores funcionales</strong> que sirvan para representar acciones, como por ejemplo errores (generalmente se suelen representar en rojo), avisos (amarillo), confirmaciones (verde), informaciones (azul) o ayudas (morado). Estos colores también deben estar armonizados con el resto de colores de la paleta cromática.</p>
+</li>
+</ul>
+<p>Una vez tengamos seleccionados todos los colores, no hay que olvidar incluir variaciones de todos ellos modificando su luminosidad. Para esto resultará muy útil <a href="por-que-es-mejor-usar-hsl-para-trabajar-con-colores.html">trabajar con modelos de color HSL</a> (de <em>hue</em>, <em>saturation</em> y <em>lightness</em>, es decir, ‘matiz, saturación, brillo y transparencia’). Generalmente se suelen incluir cuatro variaciones de cada color (a las que podemos llamar <em>‘dark’,</em> <em>‘main’</em>, <em>‘light’</em>, y <em>‘faded’,</em> por ejemplo), pero se puede usar las que se necesiten. Estas variaciones son muy útiles por ejemplo a la hora de crear efectos <em>hover</em>, degradados o para indicar que algún elemento está deshabilitado.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-05.jpg" alt="Cómo hacer la paleta cromática de un Design System" />
+</picture>
+</div>
+<h4 id="la-tipografía">La tipografía</h4>
+<p>Como los colores, la tipografía es uno de los elementos que más contribuyen a definir el aspecto final de una web. Así que es muy importante que se incluyan todas sus características en el Design System: fuente, variantes, tamaño, interlineado, espaciado…</p>
+<ul>
+<li>
+<p><strong>La fuente:</strong> Por lo general lo habitual es escoger dos tipografías para un <em>site</em>: una fuente con personalidad que represente bien el carácter de la marca y que se usará en algunos textos seleccionados y otra que destaque por su legibilidad, que se empleará en los textos de alta densidad para ayudar a transmitir mejor el mensaje. Siempre intentamos además que ambas fuentes se diferencien claramente la una de la otra (por ejemplo usando una tipografía serifa y otra sans-serif). Hace tiempo ya dimos algunos <a href="consejos-para-escoger-la-mejor-tipograf%c3%ada-para-tu-web.html">consejos para mejorar la legibilidad de tus textos web</a> en este blog, así que te animamos a que los eches un vistazo.</p>
+</li>
+<li>
+<p><strong>Las variantes:</strong> Una vez establecidas todas las tipografías permitidas, debemos proporcionar directrices sobre el uso de los distintos grosores de trazo válidos: <em>thin, light, regular, medium, semibold, bold, extrabold, black…</em> También es importante definir el uso de cursivas.</p>
+</li>
+<li>
+<p><strong>Tamaño:</strong> Los tamaños de las fuentes tienen una función importantísima desde el punto de vista de la usabilidad de un <em>site:</em> dar jerarquía a la información. Usar muchos tamaños de fuente distintos termina por dar un aspecto desordenado, así que lo ideal es usar un número limitado de tamaños y que estos guarden una proporción entre ellos. Es lo que llamamos ‘escala tipográfica’. Aunque el número final de tamaños de una escala tipográfica depende del tipo de web que estemos construyendo, lo ideal es limitarlos a ocho: cinco para textos cortos (como títulos y etiquetas) y tres para textos densos (lo que vienen siendo los párrafos). Todos estos tamaños deben definirse en función de la unidad de referencia, que se va multiplicando por un factor de escala para generar todos los tamaños que se van a emplear en el <em>site.</em> Los factores de escala varían en función del diseño. Uno de los más comunes es fijar el tamaño base de la fuente en 16px (8x2) y multiplicarlo por 0.64, 0.8, 1, 1.25, 1.563, 1.953, 2.441 y 3.052. Así, obtendremos ocho tamaños: 10.24px, 12.80px, 16px, 20px, 25px, 31.25px, 39px y 48.83px. Si se opta por una unidad de referencia de 6, entonces podemos fijar el tamaño base en 18px, con lo que las medidas resultantes serán 11.52px, 14.40px, 18.00px, 22.50px, 28.13px, 35.16px, 43.95px y 54.93px. Existen muchos factores de escala: puedes encontrar más en <a href="https://type-scale.com/" target="_blank" rel="noopener noreferrer nofollow">Type Scale</a>. Estas medidas son las que se aplican para pantallas de escritorio, donde la distancia entre los ojos del usuario y el texto es elevada (unos 50 centímetros aproximadamente). Los dispositivos móviles por su parte se consultan a mucha menos distancia (unos 25 o 30 centímetros) así que debemos reducir el tamaño de la tipografía.</p>
+</li>
+</ul>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-12.jpg" alt="Tamaños de fuentes en un Design System" />
+</picture>
+</div>
+<ul>
+<li>
+<p><strong>Interlineado:</strong> El tamaño de las fuentes y el interlineado deben coincidir con la cuadrícula para permitir un mejor emparejamiento entre el texto y otros elementos de la interfaz de usuario.</p>
+</li>
+<li>
+<p><strong><em>Tracking:</em></strong> Es aconsejable optimizar el espaciado de las letras (<em>tracking</em>), especialmente en los tamaños grandes destinados a textos cortos, donde lo ideal es juntar un poco más los caracteres para aprovechar así mejor el espacio, evitar saltos de línea y crear composiciones más armónicas. Por el contrario, lo recomendable es no tocar el <em>tracking</em> en los textos de alta densidad.</p>
+</li>
+</ul>
+<h4 id="los-iconos">Los iconos</h4>
+<p>La mayoría de sitios web hace uso de iconos, ya que son muy útiles en las interfaces de usuario porque pueden explicar un concepto de un simple vistazo.</p>
+<p>Para evitar improvisaciones, es importante proporcionar en el Design System un amplio repertorio de iconos. Todos ellos deben guardar similitudes que les hagan ser percibidos como una familia: el estilo, el ancho de sus trazos, su color, su relleno… Un consejo para facilitar su uso es que estos iconos se nombren en función de lo que representan y no de lo que son. Por ejemplo, el icono de la papelera debería llamarse ‘eliminar’ para que cada vez que se quiera representar esta acción, se emplee el mismo icono —y no por ejemplo el icono de la cruz—. Esto dará más consistencia a la web y hará que la experiencia de uso sea más intuitiva.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-07.jpg" alt="Iconos en un Design System" />
+</picture>
+</div>
+<p>Finalmente hay que recordar que los iconos deben integrarse dentro de un cuadro delimitador cuyas dimensiones sean múltiplo de la unidad de referencia para que así se ajusten a la cuadrícula del <em>site</em>. Los iconos generalmente tienen que funcionar a tamaños muy reducidos (si se trabaja con el x8 como unidad de referencia, lo habitual es que los iconos se diseñen a 24x24 píxeles), así que deben estar diseñados para ser reconocibles a ese tamaño. Algunos Design Systems proporcionan un tamaño mínimo para sus iconos para evitar la pérdida de inteligibilidad.</p>
+<h4 id="las-animaciones">Las animaciones</h4>
+<p>Las animaciones —o <em>motions</em>— son un punto importante. El modo y velocidad al que se mueven los objetos de un <em>site</em> (ya sea una ventana modal, los elementos de un carrusel o el efecto <em>hover</em> de un botón) ayuda a dar sensación de consistencia. Por eso el Design System debe especificarlas siempre.</p>
+<h4 id="otros-elementos">Otros elementos</h4>
+<p>Como decíamos, un Design System puede incluir unos <em>foundations</em> u otros en función de la naturaleza del <em>site.</em> Por ejemplo, algunos incluyen información sobre el uso de sombras (<em>‘elevations’</em>) o degradados (<em>‘gradients’</em>)… Pero si el <em>site</em> no va a hacer uso de sombras o degradados, no es necesario incluirlos.</p>
+<h3 id="2-components">2. Components</h3>
+<p>Una vez definidos los <em>foundations</em> empezamos a crear componentes. Los componentes son pequeñas piezas que no pueden dividirse sin perder su significado y que se usan como las principales unidades de construcción de las interfaces de usuario.</p>
+<p>Para esta parte generalmente se empieza elaborando un inventario con todas las ‘piezas’ que vamos a necesitar para el <em>site</em>. Según el tipo de web, el Design System incluirá unas u otras piezas, por lo que no es necesario añadir componentes si no se van a utilizar nunca en el <em>site.</em> Por ejemplo, en este artículo vamos a hablar solo de unos cuantos (como enlaces, botones, inputs, checkbox, modales, tablas o pestañas), que por lo general son los componentes que suele haber en casi todos los <em>site</em>. Pero se pueden añadir muchos más, como avatares, globos (<em>badges</em>), gráficos, <em>tags,</em> <em>switches,</em> <em>sliders,</em> <em>lightboxes,</em> <em>spinners,</em> <em>skeleton screens…</em> Como veremos más adelante, los Design System son documentos abiertos en constante evolución.</p>
+<p>Una vez listo el inventario iremos dibujando en Figma cada uno de los componentes.</p>
+<h4 id="enlaces">Enlaces</h4>
+<p>Los enlaces son en esencia solo textos, pero deben tener un aspecto que facilite su identificación por parte de los usuarios. Un enlace puede presentar cuatro estados distintos —<em>link</em> (el estado por defecto de un enlace), <em>visited</em> (la apariencia que debe adoptar un enlace cuando ya ha sido visitado previamente), <em>hover</em> (cuando se coloca el puntero del ratón sobre él) y <em>active</em> (cuando se hace clic sobre él)—, así que en el Design System se deben definir cada uno de ellos.</p>
+<p>A veces también un Design System puede diferenciar entre enlaces internos (dentro del <em>site</em>) y externos (a otros <em>sites</em>), para lo que se suele usar un icono junto al enlace.</p>
+<h4 id="botones">Botones</h4>
+<p>Los botones son uno de los elementos que no suelen faltar en un Design System, ya que se han convertido en uno de los principales puntos de interacción de los usuarios con las interfaces.</p>
+<p>En un Design System siempre se suelen incluir variantes de los botones. Esto permite utilizan varios juntos sin crear confusión en los usuarios sobre cuál sería mejor hacer clic. Por lo general hay dos tipos de botones: uno para las acciones primarias y otro para las secundarias. Por otro lado, los botones también suelen adoptar distintos tamaños en función del lugar en el que se coloquen. También suelen ser dos los tamaños que se incluyen: estándar y pequeño.</p>
+<p>De cada uno de estos botones, en el Design System se deben definir sus diferentes estados: habilitado (el estado por defecto, que indica que un botón está operativo), <em>hover</em> (para reforzar que un botón es interactivo cuando se pasa por encima de él el cursor del ratón), activo (cuando se hace clic sobre él) y deshabilitado (para indicar visualmente que un botón no funciona). También se puede incluir el estado de carga, que es el que se utiliza cuando tras pulsar un botón hay que esperar un tiempo para ver su resultado, como por ejemplo tras enviar un formulario.</p>
+<p>Los botones también suelen incluir a veces iconos, ya que sirven para facilitar la comprensión de la finalidad del botón</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-08.jpg" alt="Botones e inputs en un Design System" />
+</picture>
+</div>
+<h4 id="inputs">Inputs</h4>
+<p>Al igual que los botones, los campos (<em>inputs</em>) son otro de los elementos que más se utilizan para la interacción de los usuarios con un <em>site</em>. Pueden ser de varios tipos —texto, áreas de texto, desplegables (<em>dropdowns</em>)…— pero todos suelen tener un aspecto común que el Design System debe definir, como las etiquetas (<em>labels</em>) o los <em>placeholders</em> (el texto de ejemplo). Etiquetas y <em>placeholders</em> pueden usarse de distinta forma. Lo habitual es que la etiqueta se sitúe sobre el campo mientras que el <em>placeholder</em> vaya dentro del campo cuando todavía no se ha introducido ningún valor real en él. Pero cada vez más se recurre a situar la etiqueta dentro del campo (cuando todavía no se ha introducido ningún valor real) y sobre él (cuando el campo está rellenándose o ya ha sido rellenado), mientras que el <em>placeholder</em> se muestra siempre bajo el campo.</p>
+<p>Además, el Design System debe establecer un aspecto para estos campos en función de sus posibles estados:</p>
+<ul>
+<li><strong>Estado activo:</strong> Es el estado por defecto de un campo. Indica que se puede introducir en él un valor pero que todavía no se ha hecho.</li>
+<li><strong>Estado ‘hover’:</strong> Define la apariencia que debe tener un campo cuando se coloca sobre él el cursor del ratón.</li>
+<li><strong>Estado con foco:</strong> Es el estado que se aplica a un campo después de que un usuario haya hecho clic sobre él. Indica que el campo está siendo editado.</li>
+<li><strong>Estado cumplimentado:</strong> Cuando un campo ya ha sido rellenado y ya no tiene el foco.</li>
+<li><strong>Estado desactivado:</strong> Impide la interacción con el campo hasta que se cumpla algún requisito que lo active, como por ejemplo rellenar otro campo del formulario primero. Generalmente se muestra en colores más apagados.</li>
+<li><strong>Estado de error:</strong> Se utiliza para informar que el valor introducido en el campo no es correcto. Lo recomendable es aplicar un cambio de color al campo (el color que previamente hayamos definido para los errores en nuestros colores funcionales, que generalmente se tratará de un tipo de rojo) junto con un mensaje de error que explique el motivo de la invalidación y —a veces— también un icono.</li>
+<li><strong>Estado confirmado:</strong> No todos los formularios incluyen este tipo de estado, pero si utilizamos la validación de campos en tiempo real (es decir, al abandonar el foco sobre un campo, sin esperar a hacer ‘submit’ en el formulario), este estado se utiliza para informar que el valor introducido por el usuario en el campo se ajusta a los requisitos. Se usa por ejemplo para introducir teléfonos o números de tarjeta de crédito. Lo recomendable es aplicar al campo el color de confirmación del Design System (verde) y un icono.</li>
+</ul>
+<h4 id="checkbox-y-radio-button">Checkbox y radio button</h4>
+<p>Los <em>checkboxes</em> y <em>radio buttons</em> son bastante parecidos. Ambos se usan para seleccionar opciones, aunque la diferencia radica en que mientras que en un <em>checkbox</em> el usuario puede seleccionar más de una opción, los <em>radio buttons,</em> sin embargo funcionan como un grupo, en el que las distintas opciones son mutuamente excluyentes: si se escoge una opción, automáticamente el resto de opciones se deseleccionan.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-09.jpg" alt="Checkboxes en un Design System" />
+</picture>
+</div>
+<p>Para diferenciarlos, tradicionalmente los <em>checkboxes</em> se forman por un texto acompañado de una casilla cuadrada, mientras que en los <em>radio buttons</em> esta casilla es circular, así que lo ideal es no cambiar esta lógica para no dar lugar a confusión entre los usuarios.</p>
+<p>En el Design System se debe especificar distintos estados para <em>checkboxes</em> y <em>radio buttons:</em> activo (por defecto e igual que no marcado), <em>hover</em> (con el cursor del ratón por encima), marcado (seleccionado), desactivado (cuando no se puede utilizar) y error (por ejemplo cuando no se ha seleccionado ninguna opción y esto es un requisito necesario para el envío de un formulario).</p>
+<h4 id="modales">Modales</h4>
+<p>Los modales son ventanas que aparecen delante del contenido principal (generalmente en el centro de la pantalla) y que interrumpen la acción, solo pudiéndose recuperar tras darles respuesta. Así que siempre deben incluir un elemento de acción o, como mínimo, un botón de cierre.</p>
+<p>Aunque las ventanas modales en realidad pueden entenderse como un simple contenedor vacío en el que se puede colocar cualquier tipo de contenido, necesitan una estructura bien definida en el Design System para proporcionar una experiencia integral. Es decir, todas ellas deben tener la misma apariencia, la misma animación y la misma forma de ‘bloquear’ el <em>site</em>. Además los elementos de acción deben estar ubicados en el mismo sitio.</p>
+<h4 id="avisos-o-banners">Avisos (o banners)</h4>
+<p>Los banners sirven para mostrar mensajes emergentes. Es importante que el Design System diferencie el aspecto de cada banner en función del tipo de mensaje que transmiten, tanto por el color de fondo (lo veíamos cuando hablábamos de los colores funcionales en este mismo artículo: si se trata de un error generalmente se suele usar el color rojo; si es un aviso, el amarillo; si es una confirmación, el verde; y si es un mensaje informativo, el azul) como por los iconos o imágenes de apoyo que los acompañan. Los banners no interrumpen la acción pero deben proporcionar a los usuarios una forma de reaccionar ante ellos, ya sea simplemente cerándolos o mediante acciones más completas representadas con botones.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-10.jpg" alt="Tooltips en un Design System" />
+</picture>
+</div>
+<h4 id="tooltips-y-toasts">Tooltips y Toasts</h4>
+<p>Los <em>tooltips</em> (ayudas) muestran información adicional al pasar el ratón por encima de un elemento. Parecidos a los <em>tooltips</em>, los <em>toasts</em> —también conocidos como <em>snackbars</em>— son pequeños mensajes emergentes de apoyo que se muestran rápidamente (generalmente en la parte inferior de la pantalla) tras realizar alguna acción, por ejemplo cuando se copia un texto a través de un botón. A diferencia de las <em>modales,</em> los <em>toasts</em> no bloquean la pantalla y, a diferencia de los <em>banners,</em> desaparecen solos sin requerir una acción adicional por parte del usuario.</p>
+<h4 id="tarjetas">Tarjetas</h4>
+<p>Las tarjetas se utilizan para agrupar información y son uno de los componentes más utilizados en cualquier <em>site.</em> Pueden ser de muchos tipos, aunque siempre es importante estructurarlas de forma similar para lograr consistencia. Suelen ser elementos interactivos, así que se debe incluir en ellas botones (generalmente en la parte inferior), aunque también en ocasiones es la propia tarjeta la que funciona como un botón.</p>
+<h4 id="carruseles">Carruseles</h4>
+<p>Cuando se tienen muchas tarjetas, en ocasiones se suelen agrupar en carruseles, en los que una serie de elementos se ordenan permitiendo el desplazamiento horizontal por ellos y aprovechando mejor el espacio al reducir el incómodo <em>scroll.</em> Los carruseles deben tener controladores de navegación para desplazarse por el contenido. Estos controladores en dispositivos táctiles suelen desaparecer para que los usuarios puedan utilizar el desplazamiento nativo.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-11.jpg" alt="Tarjetas en un Design System" />
+</picture>
+</div>
+<h4 id="tablas">Tablas</h4>
+<p>Las tablas permiten organizar datos en filas y columnas de forma que sean más entendibles y accesibles. El Design System debe definir el aspecto y uso de cada tipo de tabla, así como de cada una de sus partes: cabecera, cuerpo, pie…</p>
+<h4 id="listados-e-índices">Listados e índices</h4>
+<p>Las listas pueden utilizarse en múltiples contextos, desde para la redacción de un texto hasta para la navegación por un contenido (índices). El elemento que las diferencia visualmente es la viñeta (<em>bullet</em>) que precede a cada uno de los elementos de una lista.</p>
+<h4 id="acordeones">Acordeones</h4>
+<p>Los acordeones son muy útiles cuando se necesita mostrar gran cantidad de contenido estructurada en bloques pero sin que ocupe mucho espacio. De este modo, una parte del contenido (generalmente el epígrafe de cada bloque) se muestra, mientras que el desarrollo se oculta. Son muy frecuentes por ejemplo para las páginas de tipo FAQs (preguntas y respuestas). Su elemento más identificativo es que incluyen un icono junto a cada epígrafe que cambia en función de si el contenido del bloque está o no visible. Por ejemplo se puede utilizar un ‘+’ para que el usuario pueda mostrar más información y un ‘-‘ para ocultarla.</p>
+<h4 id="pestañas">Pestañas</h4>
+<p>Las pestañas (o <em>tabs</em>) sirven para organizar una página como si fuera un armario clasificador, mostrando uno u otro contenido en función de la pestaña que se tenga activa. Por eso debe haber una clara diferenciación visual entre las pestañas seleccionadas y los no seleccionadas.</p>
+<h4 id="paginaciones">Paginaciones</h4>
+<p>Al igual que las pestañas, las paginaciones sirven para mostrar un contenido u otro en función de el número que seleccione el usuario. Las paginaciones suelen usarse casi exclusivamente en los listados de elementos, por ejemplo con los artículos de un blog o los productos de una tienda online, para evitar largos <em>scrolles.</em></p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-13.jpg" alt="Paginaciones en un Design System" />
+</picture>
+</div>
+<h4 id="breadcrumbs">Breadcrumbs</h4>
+<p>Los <em>breadcrumbs</em> (migas de pan) son un elemento de navegación que sirve para que los usuarios conozcan su ubicación actual dentro de la estructura del <em>site</em> y que muestran un listado de páginas que va de la página actual a la página de inicio pasando por todas las páginas ‘padre’. Se muestran en la parte superior de la página, normalmente justo debajo de la navegación del <em>site,</em> y son especialmente prácticos en webs en los que los usuarios pueden llegar a un nivel de profundidad elevado. Además, una página muy profunda suele mostrar contenidos muy específicos, por lo que si el usuario llega a ella a través de una búsqueda en Google puede ‘ascender’ mediante estas migas de pan a contenidos más generales.</p>
+<p>Lamentablemente, en resoluciones móviles, los problemas de utilizar <em>breadcrumbs</em> superan rápidamente a los beneficios, ya que suelen abarcar varias líneas, ocupando un espacio muy valioso en la parte superior de la pantalla y no ilustrando claramente la estructura de cadena. Lo recomendable en estos casos son <em>breadcrumbs</em> con un solo elemento que apunte al nivel superior.</p>
+<h3 id="3-patterns">3. Patterns</h3>
+<p>Con los distintos componentes del <em>site</em> ya definidos, el siguiente paso es construir patrones (en algunos Design System los llaman <em>patterns</em> o <em>templates</em>), aunque a nosotros en el estudio nos gusta más llamarlos módulos. Estos módulos son pequeños ecosistemas en los que los distintos componentes conviven entre sí para crear una funcionalidad concreta.</p>
+<p>Predefiniendo distintos tipos de módulos, la elaboración de páginas web se vuelve mucho más sencilla. Además de encontrarnos siempre partes comunes —como cabeceras y <em>footers</em>— que ayudan a dar integridad al conjunto del <em>site</em> como un todo, la mayoría de las veces recurrimos a las mismas soluciones de diseño a la hora de integrar contenidos. No solo es que el proceso de diseño y desarrollo de nuevas páginas sea más rápido así, sino que además es lo recomendable ya que se consigue más consistencia en el uso del <em>site</em> creando estructuras reconocibles para los usuarios.</p>
+<h2 id="cómo-publicar-un-design-system">¿Cómo publicar un Design System?</h2>
+<p>Una vez diseñados todos los elementos del Design System, toca publicarlo. Los Design System no son fotos fijas. Crecen y evolucionan constantemente, así que los .PDF —y demás formatos estáticos del estilo— no son los más adecuados para publicar un Design System. Si recurrimos a ellos, cada vez que se realice algún cambio tendremos que publicar una nueva versión y comunicárselo a todo el equipo. Y esto no garantizará que todos los miembros estén alineados, ya que durante un tiempo pueden circular varios documentos distintos, cada uno implantado en un equipo diferente, lo que generará confusión y problemas.</p>
+<p>Por eso lo realmente aconsejable es publicar los Design System a modo de web, donde todas las personas dedicadas a gestionar el diseño y desarrollo del <em>site</em> puedan no solo resolver dudas sino acceder directamente a todos los recursos, componentes y patrones, convirtiéndose en un ecosistema de trabajo para los distintos equipos, donde un diseñador podrá prototipar una página rápidamente con ayuda de los componentes ya diseñados en Figma, un programador podrá copiar directamente el código que necesite para su desarrollo, un miembro del equipo de marketing podrá ver cuáles son las normas de estilo para sus creatividades y un <em>copywriter</em> podrá consultar las pautas de redacción.</p>
+<p>Este <em>site</em> puede dividirse en tres grandes bloques: <em>branding</em>, librería y recursos.</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-14.jpg" alt="¿Cómo publicar un Design System?" />
+</picture>
+</div>
+<h3 id="1-branding">1. Branding</h3>
+<p>Como hemos visto, un Design System no es un manual de marca, pero todo Design System debe incluir información de manual de marca. Por eso en este primer punto de tu Design System conviene recopilar toda la información que, a pesar de no estar estrictamente relacionada con el diseño y desarrollo del <em>site</em> —al menos no directamente— sí que tiene un peso importante a la hora de definir otros elementos del Design System. Nosotros incluimos en este apartado el logotipo, los valores de marca, el <em>buyer persona</em> y el contenido. Veamos cada uno de ellos más detenidamente…</p>
+<h4 id="el-logotipo">El logotipo</h4>
+<p>El logotipo es quizá el elemento que mejor representa a una marca, así que hay que dedicarle especial atención para que cumpla su función correctamente. Es conveniente que desde el Design System se puedan descargar todas sus versiones aprobadas del logotipo, tanto la ‘canónica’ (la forma en la que debe aparecer siempre por defecto) como las alternativas (por ejemplo la versión monocromática), especificando claramente los casos en los que se debe usar cada una de ellas. No hay que olvidar incluir en estas descargas todas las resoluciones y formatos (JPEG, PNG y .SVG) posibles. De este modo evitaremos que nadie tenga la necesidad de generar su propio logotipo por libre con el riesgo de alterar alguna de sus características.</p>
+<p>En el Design System se debe dar solución a cada una de las situaciones que se puedan presentar a la hora de representar el logo para evitar improvisaciones e interpretaciones personales que harán que el logo pierda poco a poco consistencia. Por eso es recomendable que en este apartado se indiquen todos los tamaños a los que puede representarse el logotipo (teniendo siempre en cuenta la unidad de referencia) y consejos tanto sobre su colocación como sobre los márgenes que debe guardar con otros contenidos. El logotipo debe funcionar bien y ser reconocible independientemente del tamaño al que se represente, así que es habitual incluir una versión reajustada para tamaños muy reducidos, como por ejemplo para el <em>favicon</em>.</p>
+<h4 id="los-valores">Los valores</h4>
+<p>La marca es mucho más que un logo. Es un conjunto de valores que definen la identidad de una empresa y que impulsan cada una de las decisiones que se toma en su seno, desde el lanzamiento de un nuevo producto hasta la realización de una campaña publicitaria pasando por su política laboral o medioambiental.</p>
+<p>Incluir un manifiesto en este punto del Design System es importante porque no solo sirve como ayuda para intuir cómo debe ser el diseño del <em>site</em> y sus contenidos, sino que cada vez más usuarios valoran que las marcas compartan su misma visión de la vida. Así que se deben recoger cuáles son los principios de la marca, qué es lo que hace, por qué lo hace y qué es lo que pretende conseguir con ello (lo que tradicionalmente se conoce como ‘misión’ y ‘visión’ empresarial).</p>
+<h4 id="el-buyer-persona">El ‘buyer persona’</h4>
+<p>Conocer a tus clientes es un paso básico para toda empresa, pero ponerlos en el centro de todas las decisiones es esencial para lograr el éxito. Por eso, un Design System es el lugar perfecto para publicar un <em>buyer persona</em>, ya que es un documento que todos los diseñadores tienen que tener muy en cuenta y siempre accesible a la hora de proponer soluciones de navegación adecuadas. Si todavía no tienes un <em>buyer persona</em> (¿a qué estás esperando?) o no sabes qué es, te aconsejamos que eches un vistazo al artículo de nuestro blog con consejos sobre <a href="que-son-los-buyer-persona-y-por-que-necesitas-uno.html">cómo elaborar uno para tu empresa</a>.</p>
+<h4 id="el-contenido">El contenido</h4>
+<p>Por mucho que tu diseño mantenga una consistencia visual, la experiencia de uso de tus visitantes no será perfecta si el contenido no lo es también, tanto el escrito como el visual. Por eso en el Design System se necesita establecer unas pautas de redacción que ayuden a generar un tono de voz uniforme, reconocible, apropiado para la audiencia, alineada con el diseño y que defina bien la personalidad de marca.</p>
+<p>También resulta interesante en este punto recoger un glosario con los eslóganes y frases estándar que se deben utilizar, así como normas ortotipográficas que unifiquen el uso de mayúsculas, cursivas, negritas o signos de puntuación. Todos esto resultará de gran ayuda para que los <em>copywriters</em> puedan hacer bien su trabajo.</p>
+<p>Pero como decimos, en una web el lenguaje no solo es escrito, también tiene un gran peso el lenguaje visual. Fotos, vídeos, ilustraciones y patrones contribuyen a transmitir mensajes tanto como lo hacen las palabras. Incluir en un Design System los requisitos que debe cumplir todo el material gráfico que se suba a la web —tanto de estilo como técnicos (por ejemplo recomendando el uso de los <a href="webp-y-avif-los-nuevos-formatos-de-imagen-que-deberias-usar-en-tu-web.html">formatos WebP y AVIF</a> o especificando los filtros que se deben aplicar a las imágenes antes de su publicación)— así como un enlace a un repositorio de imágenes donde los diseñadores podrán acceder a una selección previamente aprobada puede resultar muy útil.</p>
+<h3 id="2-la-librería">2. La librería</h3>
+<p>La librería (en realidad una mala traducción del inglés <em>library</em>) es la transformación en código del inventario de <em>tokens</em>, componentes y módulos que hemos realizado previamente con nuestra herramienta de diseño de interfaces de usuario. Esta librería supone el auténtico marco de trabajo para los desarrolladores web. Cada uno de los elementos de esta librería se compone de:</p>
+<ul>
+<li>
+<p><strong>Nombre:</strong> Ya sea una variable, un componente o un módulo, en la librería se especifica el nombre de cada uno de los elementos siguiendo la misma nomenclatura que se ha usado previamente en la fase de diseño. De este modo no hay problemas de comunicación o malentendidos y todo el mundo implicado en el <em>site</em> (diseñadores, programadores o responsables de contenido) sabe de qué estamos hablando cuando por ejemplo nos referimos a un ‘acordeón’.</p>
+</li>
+<li>
+<p><strong>Descripción:</strong> Cada elemento va acompañado de una descripción sobre su función y de unas normas de uso sobre cómo se debe utilizar y en qué casos debe emplearse. A veces incluso se incluyen ejemplos de lo que hay que hacer y de lo que no hay que hacer para contextualizar y ayudar a entender mejor el elemento.</p>
+</li>
+<li>
+<p><strong>Código:</strong> Cada elemento va acompañado de un fragmento de código de ejemplo que los desarrolladores pueden copiar y pegar en su proyecto para luego adaptarlo a sus necesidades jugando con los distintos atributos y clases que se especifican y que sirven para darle un aspecto u otro.</p>
+</li>
+</ul>
+<h3 id="3-recursos">3. Recursos</h3>
+<p>Finalmente, en el Design System se pueden incluir todas las herramientas de uso necesario para diseñadores y desarrolladores:</p>
+<div class="post-img-xxxxl">
+<picture>
+<img class="media-cover" srcset="/assets/images/posts/como-disenar-un-design-system-paso-a-paso-15.jpg" alt="Descargables" />
+</picture>
+</div>
+<ul>
+<li>
+<p><strong>Programas:</strong> Enlaces a los distintos programas de trabajo (Sketch, Figma, Photoshop, Illustrator, Visual Studio Code, Atom, Brackets…) así como a los <em>plugins</em> que deben instalarse. También se puede incluir un listado de <a href="herramientas-online-para-disenadores-web.html">herramientas online útiles</a>.</p>
+</li>
+<li>
+<p><strong>Plantillas descargables:</strong> Fundamentalmente se incluyen las plantillas de diseño (Sketch, Figma, XD) ya listas con todos los componentes, estilos y guías para generar nuevas pantallas, aunque también se pueden incluir plantillas para la generación de imágenes o para la redacción de contenidos.</p>
+</li>
+<li>
+<p><strong>Control de versiones:</strong> Si se trabaja con integración continua, es muy útil que se incluya aquí el proceso de trabajo y el acceso a los repositorios.</p>
+</li>
+</ul>
+<hr />
+<p>En este artículo hemos visto el proceso para la creación de un Design System. Como puedes ver, con ayuda de un Design System cualquier producto digital —ya sea un sitio web o una <em>app—</em> puede crecer de forma ágil pero sin la pérdida de consistencia que a menudo se produce cuando los cambios son apresurados. Si necesitas elaborar tu propio Design System, en OKB Interactive Studio podemos ayudarte con ello.</p>
+<div class="post-share mt-50">
+<div>
+<p class="font-weight-bold">¿Te ha parecido interesante? ¡Compártelo!</p>
+<p>Seguro que a tus contactos le gusta leerlo.</p>
+</div>
+<ul>
+<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso.html"><img src="../assets/images/logos/icon-linkedin.svg" alt="Linkedin" /></a></li>
+<li><a href="https://twitter.com/intent/tweet?text=C%c3%b3mo%20crear%20un%20Design%20System%20paso%20a%20paso&amp;url=https://okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso.html&amp;hashtags=okbinteractivestudio"><img src="../assets/images/logos/icon-twitter.svg" alt="Twitter" /></a></li>
+<li><a href="https://api.whatsapp.com/send?text=C%c3%b3mo%20crear%20un%20Design%20System%20paso%20a%20paso%20https://okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso.html"><img src="../assets/images/logos/icon-whatsapp.svg" alt="Whatsapp" /></a></li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+
+<section class="section sec-inner module-form module-form-1 overflow-hidden ">
+<div class="section-bg bg-light" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="row">
+<div class="col-12 col-lg-6 mb-50 mb-lg-0">
+<div class="c-line c-line__h4 mt-lg-40" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4 mb-30 mb-md-50 mb-sm-30 mr-xxl-60" data-animate="splitTextUp">Creamos un Design System a tu medida</h3>
+<div class="mr-md-60" data-animate="fadeInUp" data-delay="100">Definimos todo el lenguaje visual de tu site para que transmita solidez y profesionalidad y te ayude a crecer con consistencia durante los próximos años.</div>
+<ul class="list-unstyled mt-35" data-animate="fadeInUp" data-delay="300">
+<li class="d-flex align-items-center my-15">
+<div>
+<span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Mejorara los flujos de trabajo entre los equipos de diseño y desarrollo.
+</li>
+<li class="d-flex align-items-center my-15">
+<div>
+<span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Reduce los costes y tiempos a la hora de incorporar nuevas funcionalidades.
+</li>
+<li class="d-flex align-items-center my-15">
+<div>
+<span class="i-outline-circle mr-15">
+<svg class="icon icon-18"><use xlink:href="../assets/icons/svg-sprite.svg#icon-bookmark" /></svg>
+</span>
+</div>
+Totalmente adaptado a tus necesidades y las de tu audiencia.
+</li>
+</ul>
+</div>
+</div>
+<div class="col-12 col-lg-6" data-animate="enterSection">
+<form class="needs-validation" novalidate data-animate="fadeInUp"> <div class="form-row">
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<select class="form-control" id="formProduct" name="interest" required>
+<option value="">Selecciona una opción</option>
+<option value="Producto o Website">Producto o Website</option>
+<option value="UI/UX">UI/UX</option>
+<option value="Ecommerce">Ecommerce</option>
+<option value="Salesforce">Salesforce</option>
+<option value="Otro">Otro</option>
+</select>
+<label for="formProduct">¿En qué estás interesado? *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formName" name="name" placeholder="Nombre *" required>
+<label for="formName">Nombre *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formCompany" name="company" placeholder="Empresa ">
+<label for="formCompany">Empresa </label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="email" class="form-control" id="formEmail" name="email" placeholder="Email *" required>
+<label for="formEmail">Email *</label>
+</div>
+</div>
+<div class="col-12 col-md-6">
+<div class="form-floating mb-10">
+<input type="tel" class="form-control" id="formPhone" name="phone" placeholder="Teléfono ">
+<label for="formPhone">Teléfono </label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<input type="text" class="form-control" id="formBased" name="location" placeholder="Localización (País o ciudad) ">
+<label for="formBased">Localización (País o ciudad) </label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<textarea class="form-control" id="formProject" name="about" placeholder="¿En que podemos ayudarte? *" style="min-height: 140px;" required></textarea>
+<label for="formProject">¿En que podemos ayudarte? *</label>
+</div>
+</div>
+<div class="col-12 ">
+<div class="form-floating mb-10">
+<select class="form-control" id="formProject" name="hear">
+<option value="">Selecciona una opción</option>
+<option value="Google">Google</option>
+<option value="LinkedIn">LinkedIn</option>
+<option value="Recomendación">Recomendación</option>
+<option value="Blog">Blog</option>
+<option value="Otro">Otro</option>
+</select>
+<label for="formProject">¿Cómo nos has conocido? </label>
+</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary btn-block btn-submit">
+<span class="submit-text">Enviar</span>
+<div class="spinner-border text-light" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</button>
+</div>
+<div class="col-12">
+<div class="form-check py-10">
+<input class="form-check-input" type="checkbox" value="" id="checkLegal" required>
+<label class="form-check-label" for="checkLegal">He leido y acepto la <a class="o-link text-blue" href="../politica-de-privacidad/index.html">política de privacidad</a></label>
+</div>
+</div>
+</div>
+<div class="alert alert-success d-none" role="alert">Hemos recibido correctamente tu mensaje, en breve nos pondremos en contacto contigo</div>
+<div class="alert alert-danger d-none" role="alert">Ha habido un error con el envío, por favor inténtalo de nuevo</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section id="secBlog" class="section sec-blog bg-white d-flex justify-content-center flex-column">
+<div class="container">
+<div class="c-line c-line__h4 mb-50" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4" data-animate="splitTextUp">Insights</h3>
+</div>
+<div class="c-blog-grid row" data-animate="enterSection">
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.mobile.jpg" alt="Prototipos web: Estas son las razones por las que cambiamos Photoshop por Figma">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">UX/UI</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="razones-por-las-que-cambiamos-photoshop-por-figma-para-hacer-prototipos-web.html">Prototipos web: Estas son las razones por las que cambiamos Photoshop por Figma</a></h4>
+<div class="card-blog-time">
+<span>6 min</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="como-disenar-el-branding-para-una-startup.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/como-disenar-el-branding-para-una-startup.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/como-disenar-el-branding-para-una-startup.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/como-disenar-el-branding-para-una-startup.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/como-disenar-el-branding-para-una-startup.mobile.jpg" alt="Cómo diseñar el branding para una startup">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">UX/UI</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="como-disenar-el-branding-para-una-startup.html">Cómo diseñar el branding para una startup</a></h4>
+<div class="card-blog-time">
+<span>10 min</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4" data-animate="fadeInUp">
+<div class="card-blog" data-animate="slideClipInUp">
+<a href="como-disenar-una-plantilla-de-email-para-tu-empresa.html" class="card-blog-media embed-responsive embed-responsive-3by4" data-slideClipInUp-target data-delay="600">
+<span class="embed-responsive-item" data-animate="slideInUp" data-move="25" data-delay="600">
+<picture>
+<source srcset="/assets/images/posts/card/como-disenar-una-plantilla-de-email-para-tu-empresa.desk.jpg" media="(min-width: 1441px)">
+<source srcset="/assets/images/posts/card/como-disenar-una-plantilla-de-email-para-tu-empresa.laptop.jpg" media="(min-width: 1025px)">
+<source srcset="/assets/images/posts/card/como-disenar-una-plantilla-de-email-para-tu-empresa.tablet.jpg" media="(min-width: 576px)">
+<img class="card-blog-img media-cover" srcset="/assets/images/posts/card/como-disenar-una-plantilla-de-email-para-tu-empresa.mobile.jpg" alt="Cómo diseñar una plantilla de email para tu empresa">
+</picture>
+</span>
+</a>
+<div class="card-blog-content">
+<div class="mt-md-20">
+<div class="c-list-tags">
+<span class="c-list-tags__item c-badge ">UX/UI</span>
+</div>
+</div>
+<h4 class="card-blog-title"><a href="como-disenar-una-plantilla-de-email-para-tu-empresa.html">Cómo diseñar una plantilla de email para tu empresa</a></h4>
+<div class="card-blog-time">
+<span>12 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-line d-flex align-items-center justify-content-center p-0 mt-50 pb-5 pb-md-0">
+<a class="btn btn-outline-primary flex-grow-1 flex-sm-grow-0" href="index.html" data-animate="fadeInUp" data-delay="600">Ver otros insights</a>
+</div>
+</div>
+</section>
+
+<section id="secCTA" class="section sec-cta position-relative">
+<div class="section-bg bg-yellow" data-animate="slideScaleInLeft"></div>
+<div class="container">
+<div class="c-line c-line__h4" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h3 class="h4 mb-20" data-animate="splitTextUp">Hagamos algo grande juntos</h3>
+<div class="col-sm-10 col-md-6 p-0">
+<p data-animate="fadeInUp">Estamos en Madrid, pero podemos trabajar contigo estés donde estés. Cuéntanos tu proyecto y estaremos encantados de agendar una llamada o videollamada para abordarlo más en detalle. Sin compromiso. </p>
+</div>
+<a class="btn btn-outline-primary mt-15" data-animate="fadeInUp" data-delay="300" href="../contacta-con-nosotros/index.html">Contacta con nosotros</a>
+</div>
+</div>
+</section><footer class="section footer position-relative min-vh-100 text-white">
+<div class="section-bg bg-black" data-animate="slideScaleInLeft"></div>
+<div class="container position-relative d-flex justify-content-center flex-column">
+<h3 class="h2 mb-40 mb-md-70" data-animate='splitTextUp'>diseñamos<br>creamos<br>comunicamos</h2>
+<div class="c-line c-line__h4" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h4 class="h4" data-animate="fadeInUp">Contacto</h4>
+<p class="mb-0" data-animate="fadeInUp" data-delay="100"><a href="../cdn-cgi/l/email-protection.html#8be3eee7e7e4cbe4e0e9e2e5ffeef9eae8ffe2fdeea5f8fffeefe2e4" class="text-blue o-link" data-mouse="over">hello@okbinteractive.studio</a></p>
+<p data-animate="fadeInUp" data-delay="150"><a href="tel:+34916573657" class="text-blue o-link" data-mouse="over">(0034) 916573657</a></p>
+<p class="footer-adress" data-animate="fadeInUp" data-delay="200">Calle Teide, 4 (oficina 0.3)<br> S.S. de los Reyes, Madrid (España)</p>
+</div>
+<div class="c-line c-line__h4 mt-35 mt-md-50 mb-50 mb-lg-0" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<h4 class="h4" data-animate="fadeInUp" data-delay="250">Descubre</h4>
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../index.html" class=" o-link" data-mouse="over">Inicio</a>
+<a href="../idea-mejores-productos/index.html" class=" o-link" data-mouse="over">Diseña</a>
+<a href="../hazlo-real/index.html" class=" o-link" data-mouse="over">Hazlo real</a>
+<a href="../comunica/index.html" class=" o-link" data-mouse="over">Comunica</a>
+<a href="../startups/index.html" class=" o-link" data-mouse="over">Startups</a>
+<a href="../proyectos/index.html" class=" o-link" data-mouse="over">Casos de estudio</a>
+<a href="index.html" class=" o-link" data-mouse="over">Insights</a>
+<a href="../empleo/index.html" class=" o-link" data-mouse="over">Empleo</a>
+<a href="../contacta-con-nosotros/index.html" class=" o-link" data-mouse="over">Contacto</a>
+</div>
+</div>
+</div>
+<div class="container">
+<p class="footer-copyright mb-0"><span>© 2008-2022 Okb Estudio Interactivo</span> <span class="d-none d-sm-inline-block mx-5">-</span> <a href="../politica-de-privacidad/index.html" class=" o-link" data-mouse="over">Política de privacidad</a></p>
+</div>
+</footer>
+</div>
+</main><nav class="c-menu" id="menu">
+<div class="c-menu-overlay"></div>
+<div class="c-menu-bg">
+
+<div class="c-menu-bg__ux">
+<div class="c-text-mask c-text-mask-menu__ux">
+<div class="blend-video content-ux" data-src="/assets/media/disena_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(208, 197, 255) 100%)">
+</div>
+</div>
+</div>
+<div class="c-menu-bg__make">
+<div class="c-text-mask c-text-mask-menu__make">
+<div class="blend-video content-make" data-src="/assets/media/crea_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(138, 185, 216) 100%)">
+</div>
+</div>
+</div>
+<div class="c-menu-bg__comunicate">
+<div class="c-text-mask c-text-mask-menu__comunicate">
+<div class="blend-video content-comunicate" data-src="/assets/media/comunica_small_1_1.mp4" data-bg="linear-gradient(135deg, #111 0%, rgb(208, 197, 255) 100%)">
+</div>
+</div>
+</div>
+</div>
+<div class="container position-relative py-50 py-md-120">
+<div class="c-line c-line__h4 mt-30 text-white" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<p id="menuTitle01" class="h4 mb-0" data-animate="fadeInUp" data-delay="250">Hagamos algo grande juntos</p>
+</div>
+<div class="c-line c-menu-wrap my-35 my-xxl-50 my-xxxl-60">
+<div class="c-menu-list">
+
+<a class="c-menu-item c-menu-item-design" data-on-off-hover="video" data-menu="close" data-video-link=".content-ux" href="../idea-mejores-productos/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuDesign"> diseña</text>
+</svg>
+</a>
+<a class="c-menu-item c-menu-item-make" data-on-off-hover="video" data-menu="close" data-video-link=".content-make" href="../hazlo-real/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuMake">
+hazlo
+<tspan dy="10">&lt;</tspan>
+<tspan dx="-35" dy="-12">real</tspan>
+<tspan dx="-35" dy="12">&gt</tspan>
+</text>
+</svg>
+</a>
+<a class="c-menu-item c-menu-item-comunicate" data-on-off-hover="video" data-menu="close" data-video-link=".content-comunicate" href="../comunica/index.html">
+<svg class="o-text-menu" data-viewbox>
+<text id="textMenuComunicate"> conecta</text>
+</svg>
+</a>
+</div>
+</div>
+<div class="c-menu-list mt-30 mt-sm-0" data-menu-animate="fadeInUp">
+<div class="c-line c-line__h4 text-white" data-animate="enterSection">
+<span class="c-line-ln"></span>
+<p id="menuTitle02" class="h4 mb-20" data-animate="fadeInUp" data-delay="250">Más</p>
+<div class="footer-nav" data-animate="fadeInUp" data-delay="300">
+<a href="../startups/index.html" class=" o-link" data-menu="close" data-mouse="over">startups</a>
+<a href="../proyectos/index.html" class=" o-link" data-menu="close" data-mouse="over">casos de estudio</a>
+<a href="index.html" class=" o-link" data-menu="close" data-mouse="over">insights</a>
+<a href="../empleo/index.html" class=" o-link" data-menu="close" data-mouse="over">empleo</a>
+<a href="../contacta-con-nosotros/index.html" class="o-link d-md-none" data-menu="close" data-mouse="over">contacta con nosotros</a>
+</div>
+</div>
+</div>
+</div>
+</nav><div class="c-scrolldown">
+<div class="c-scrolldown-text">scroll</div>
+<div class="c-scrolldown-line">
+<span class="c-scrolldown-line-in"></span>
+</div>
+</div><div class="c-fixed-comment">
+<div class="c-fixed-comment-text">Somos <span class="font-weight-bold">okb</span>, un estudio digital &lt;multi__disciplinar&gt; independiente</div>
+<div class="c-fixed-comment-crcl"></div>
+</div><div class="loadingContainer">
+<div id="progress_bar">
+<div id="bar_percentage"></div>
+</div>
+<i class="c-brand-lo c-brand-loading">
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 50 50">
+<path class="svgBrandPath svgBrandPathLoading" d="M41.62,16.14a23.36,23.36,0,0,1-3.9-.57,4.81,4.81,0,0,0-2.15-.65c-1.93.14-2.25,1.37-4.62,2.28-.36.14-.74.29-1.14.43a6,6,0,0,0,.52,1.65,4.07,4.07,0,0,1-.86-1.53,17.71,17.71,0,0,1-5.13,1.07c-3.92.17-8,1.47-12.94,7.53A6.76,6.76,0,0,1,8.77,28.1c.76,1.53,4.27,3.61,11.05,1.15a7,7,0,0,1-1-4.33,8,8,0,0,0,1.54,4.13h0A12.83,12.83,0,0,0,30.76,34.4a6.2,6.2,0,0,1-2.14-2.32c1,1.05,2.82,2.48,4.52,2h0a7.54,7.54,0,0,1-2.19-2c.33.22,2.38,2.14,3.68,1.39l.06,0A4.87,4.87,0,0,1,32.92,32c1.44,1,2.2.91,2.7.7-8-5.6-7.44-7.7-7.54-8.55h0a8.07,8.07,0,0,1,.5-3.4,6.54,6.54,0,0,0,.08,2.75c1.3-1.64,1-2.67,3.07-4.13a16.74,16.74,0,0,1,3.76-1.3c1.8-.38,2.8-.58,3.3-.71.65-.16,2.17-.5,2.5-.61S42.31,16.13,41.62,16.14Z" />
+<circle class="svgBrandCir svgBrandCirLoading" r="23" fill="none" cx="25" cy="25" stroke="black" stroke-width="8" />
+<circle class="svgBrandCir svgBrandCirLoadingBack" r="23" fill="none" cx="25" cy="25" stroke="black" stroke-width="7" />
+</svg>
+</i>
+</div><script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/vendors-dista752.js?v=20220622104826"></script>
+<script src="../assets/js/scripts-dista752.js?v=20220622104826"></script>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'72020cd49a286f23',m:'y66kzBR9YM2U3AtCtcIBe.4ybJSES8QFgZ6bYMAMLms-1656037917-0-AW5J2Q/VL569+aCseyZyN/7Tjsxy5+0mxVCrH28NfQf5lzlBmXtbW/4RAR7242paGfBAMatsGZut74vlgW1JSwEyTkIBftnWQ0Gh8jL2oCwsKgcfBbGfXkdh4FvQmXqsWpSJlmzY4qdSZOFQErrRCiXPfS5nTGioNofzI/UF21CexLapOj04bitNRhF/pVR74g==',s:[0x6ec14ebeee,0x4770520af4],u:'/cdn-cgi/challenge-platform/h/b'}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"72020cd49a286f23","version":"2022.6.0","r":1,"token":"694e680bfb354dc181b243c5069491b5","si":100}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from okbinteractive.studio/insights/como-crear-un-design-system-paso-a-paso by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jun 2022 02:32:48 GMT -->
+</html>

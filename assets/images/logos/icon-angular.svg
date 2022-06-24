@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-icon-angular">
+      <rect width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="icon-angular" clip-path="url(#clip-icon-angular)">
+    <g id="angular_solidBlack" transform="translate(-25.175 -25)">
+      <path id="Trazado_140" data-name="Trazado 140" d="M108,107.284h10.628L113.314,94.5Z" transform="translate(-58.139 -49.413)"/>
+      <path id="Trazado_141" data-name="Trazado 141" d="M55.175,30h0L31.9,38.3l3.55,30.775L55.175,80h0L74.9,69.075,78.45,38.3ZM69.7,68.15H64.275l-2.925-7.3H49l-2.925,7.3H40.65L55.175,35.525h0L69.7,68.15Z"/>
+    </g>
+  </g>
+</svg>
