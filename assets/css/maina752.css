@@ -1171,7 +1171,7 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
 
 a.bg-blue-light:hover, a.bg-blue-light:focus, button.bg-blue-light:hover, button.bg-blue-light:focus { background-color: #c2cad4 !important; }
 
-.bg-yellow { background-color: #F9E24D !important; }
+.bg-yellow { background-color: #3CB4AD !important; }
 
 a.bg-yellow:hover, a.bg-yellow:focus, button.bg-yellow:hover, button.bg-yellow:focus { background-color: #f7da1c !important; }
 
@@ -2374,7 +2374,7 @@ h5 { line-height: 1.4; }
 
 .gradient-01-1 { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(45deg, rgba(17, 42, 80, 0) -50%, rgba(0, 103, 255, 0.8) 100%); }
 
-.gradient-red { background: linear-gradient(135deg, #C20936 -100%, #EA004C 110%); }
+.gradient-lifemedics { background: linear-gradient(135deg, #3CB4AD -100%, #0056A4 110%); }
 
 .bg-gradient-primary { background: linear-gradient(135deg, #39223d 0%, #690046 100%); }
 
