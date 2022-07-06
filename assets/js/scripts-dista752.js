@@ -10644,7 +10644,7 @@ if (isES) {
     "message": "Utilizamos cookies propias y de terceros para permitir y mejorar su experiencia de navegación y realizar análisis estadísticos relacionados con sus preferencias a partir de sus hábitos de navegación.",
     "dismiss": "ENTENDIDO",
     "link": "política de cookies.",
-    "href": "https://okbinteractive.studio/politica-de-privacidad/"
+    "href": "https://lifemedics.site/politica-de-privacidad/"
   }
 } else {
   var cookieContent = {
