@@ -3125,11 +3125,11 @@ div.mce_inline_error { background-color: #f8d7da !important; position: absolute;
 
 .c-headline { color: #EA0053; font-weight: 800; margin-bottom: 0; letter-spacing: -12px; }
 
-.sec-intro .c-headline { background: -webkit-linear-gradient(transparent, transparent), url(../images/home.base.text.background.jpg); -webkit-text-fill-color: transparent; background-size: 1920px 1080px; background-position: center; background-repeat: no-repeat; background-clip: text; -webkit-background-clip: text; padding-bottom: 12px; font-size: 200px; line-height: .7; }
+.sec-intro .c-headline { background: -webkit-linear-gradient(transparent, transparent), url(../images/home.base.text.background.png); -webkit-text-fill-color: transparent; background-size: 1920px 1080px; background-position: center; background-repeat: no-repeat; background-clip: text; -webkit-background-clip: text; padding-bottom: 12px; font-size: 200px; line-height: .7; }
 
 .sec-intro .c-headline > div { overflow: hidden; }
 
-.sec-intro .c-headline .split { /*background: -webkit-linear-gradient(transparent, transparent), url(../../assets/images/home.base.text.background.jpg); -webkit-text-fill-color: transparent; background-size: 1920px 1080px; background-position: center; background-repeat: no-repeat; background-clip: text; -webkit-background-clip: text;*/ }
+.sec-intro .c-headline .split { /*background: -webkit-linear-gradient(transparent, transparent), url(../../assets/images/home.base.text.background.png); -webkit-text-fill-color: transparent; background-size: 1920px 1080px; background-position: center; background-repeat: no-repeat; background-clip: text; -webkit-background-clip: text;*/ }
 
 .sec-design .c-headline { background: -webkit-linear-gradient(transparent, transparent), url(../images/ux.background.jpg); -webkit-text-fill-color: transparent; background-size: 1920px 1278px; background-position: center; background-repeat: no-repeat; background-clip: text; -webkit-background-clip: text; font-size: 999px; padding-bottom: 30px; position: absolute; }
 
